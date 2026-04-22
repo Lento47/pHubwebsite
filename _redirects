@@ -1,5 +1,2 @@
-/privacidad /privacidad.html 200
-/terminos /terminos.html 200
-/seguridad /seguridad.html 200
-/uso-aceptable /uso-aceptable.html 200
-/reembolsos /reembolsos.html 200
+# Cloudflare Pages handles Clean URLs automatically. 
+# Removing the internal loops.
