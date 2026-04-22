@@ -72,7 +72,14 @@
                     <h5 class="text-[10px] uppercase tracking-widest font-black text-slate-500 mb-4">Desarrolladores</h5>
                     <nav class="space-y-1">
                         <a href="#api-auth" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Autenticación API</a>
-                        <a href="#" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Referencia General</a>
+                        <a href="#api-endpoints" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Referencia de Endpoints</a>
+                        <div class="pl-4 space-y-1 mt-2">
+                            <a href="#endpoint-workspace" class="block py-1 text-xs text-slate-500 hover:text-blue-400">Workspace</a>
+                            <a href="#endpoint-contacts" class="block py-1 text-xs text-slate-500 hover:text-blue-400">Contactos</a>
+                            <a href="#endpoint-conversations" class="block py-1 text-xs text-slate-500 hover:text-blue-400">Conversaciones</a>
+                            <a href="#endpoint-tasks" class="block py-1 text-xs text-slate-500 hover:text-blue-400">Tareas</a>
+                            <a href="#endpoint-billing" class="block py-1 text-xs text-slate-500 hover:text-blue-400">Facturación</a>
+                        </div>
                         <a href="#" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Webhooks</a>
                     </nav>
                 </div>
@@ -329,6 +336,102 @@
                         <div class="p-6 bg-white/2 rounded-xl border border-white/5">
                             <p class="text-white font-bold mb-2">¿Cómo funciona la IA en el Inbox?</p>
                             <p class="text-sm text-slate-400">La IA analiza el tono del cliente y te sugiere respuestas rápidas basadas en tu historial. También genera resúmenes diarios de los temas más hablados.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="border-white/5 my-20">
+
+                <!-- ENDPOINTS REFERENCE SECTION -->
+                <section id="api-endpoints" class="scroll-mt-32">
+                    <div class="flex items-center gap-2 text-blue-500 text-sm font-bold mb-4">
+                        <i class="fa-solid fa-list-check"></i> API REFERENCE
+                    </div>
+                    <h1 class="text-5xl font-black text-white mb-6">Referencia de Endpoints</h1>
+                    <p class="text-xl text-slate-400 mb-10">Todos los endpoints requieren autenticación con <code>Authorization: Bearer &lt;token&gt;</code> salvo que se indique lo contrario.</p>
+
+                    <!-- Workspace -->
+                    <div id="endpoint-workspace" class="mb-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3">
+                             <i class="fa-solid fa-briefcase text-blue-500"></i> Workspace
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-white/2 p-6 rounded-2xl border border-white/5">
+                                <span class="bg-blue-600/20 text-blue-500 px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-widest mb-2 inline-block">GET</span>
+                                <code class="text-white block mb-2">/api/workspaces/current</code>
+                                <p class="text-sm text-slate-400">Retorna la información completa del workspace activo (plan, estado, configuración).</p>
+                            </div>
+                            <div class="bg-white/2 p-6 rounded-2xl border border-white/5">
+                                <span class="bg-blue-600/20 text-blue-500 px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-widest mb-2 inline-block">GET</span>
+                                <code class="text-white block mb-2">/api/workspaces/current/stats</code>
+                                <p class="text-sm text-slate-400">Métricas históricas: conversaciones, mensajes, tareas, documentos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contactos -->
+                    <div id="endpoint-contacts" class="mb-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3">
+                             <i class="fa-solid fa-address-book text-blue-500"></i> Contactos
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-white/2 p-6 rounded-2xl border border-white/5">
+                                <span class="bg-blue-600/20 text-blue-500 px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-widest mb-2 inline-block">GET</span>
+                                <code class="text-white block mb-2">/api/contacts?type=CUSTOMER&page=1&limit=50&q=Juan</code>
+                                <p class="text-sm text-slate-400 mb-4">Listado de contactos con filtros avanzados.</p>
+                                
+                                <div class="overflow-x-auto">
+                                    <table class="w-full text-xs text-left border-t border-white/10 mt-4">
+                                        <thead>
+                                            <tr class="text-slate-500 border-b border-white/5">
+                                                <th class="py-2">Param</th>
+                                                <th class="py-2">Tipo</th>
+                                                <th class="py-2">Descripción</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="border-b border-white/5"><td class="py-2 font-mono text-blue-400">type</td><td class="py-2">string</td><td class="py-2 text-slate-500">CUSTOMER, VENDOR, LEAD, OTHER</td></tr>
+                                            <tr class="border-b border-white/5"><td class="py-2 font-mono text-blue-400">q</td><td class="py-2">string</td><td class="py-2 text-slate-500">Búsqueda por nombre, email o teléfono</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conversaciones -->
+                    <div id="endpoint-conversations" class="mb-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3">
+                             <i class="fa-solid fa-comments text-blue-500"></i> Conversaciones
+                        </h2>
+                        <div class="bg-black/60 p-6 rounded-2xl border border-white/5">
+                            <span class="bg-green-600/20 text-green-500 px-2 py-0.5 rounded text-[10px] font-black uppercase mb-3 inline-block">POST</span>
+                            <code class="text-white block text-sm mb-4">/api/conversations/{id}/messages</code>
+                            <div class="bg-white/5 p-4 rounded-lg font-mono text-xs">
+                                <pre>{
+  "body": "Hola, ¿en qué le puedo ayudar?",
+  "direction": "OUTBOUND"
+}</pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paginación -->
+                    <div class="mt-20 p-8 card-premium bg-blue-600/5 border-blue-500/20">
+                        <h3 class="text-white font-bold mb-4">Patrón de Paginación Global</h3>
+                        <p class="text-sm text-slate-400 mb-6">Todos los listados devuelven un objeto <code>meta</code> para facilitar el control de páginas en el frontend:</p>
+                        <div class="bg-black/40 p-4 rounded-xl font-mono text-xs">
+                            <pre>{
+  "data": [...],
+  "meta": {
+    "page": 2,
+    "limit": 25,
+    "total": 148,
+    "total_pages": 6
+  }
+}</pre>
                         </div>
                     </div>
                 </section>
