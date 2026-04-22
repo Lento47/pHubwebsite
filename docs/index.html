@@ -468,13 +468,76 @@
                         <h2 class="text-3xl font-bold flex items-center gap-3 text-white">
                              <i class="fa-solid fa-bolt text-blue-500"></i> Webhooks
                         </h2>
-                        <div class="card-premium p-6 border-white/5">
-                            <h4 class="text-white font-bold mb-4">Eventos principales</h4>
-                            <ul class="text-xs space-y-2 font-mono text-blue-400 list-disc pl-4">
-                                <li>MESSAGE_RECEIVED</li>
-                                <li>CONTACT_CREATED</li>
-                                <li>INVOICE_PAID</li>
-                            </ul>
+                        <p class="text-slate-400">PymeHub puede recibir webhooks de servicios externos para procesar eventos en tiempo real. Actualmente soporta webhooks de <strong>Resend</strong> (email entrante) y <strong>Meta Cloud API</strong> (WhatsApp).</p>
+
+                        <!-- Email Webhook -->
+                        <div class="space-y-6">
+                            <h3 class="text-xl font-bold text-white border-l-4 border-blue-500 pl-4">Webhook de Email (Resend)</h3>
+                            <p class="text-sm text-slate-400">Recibe emails entrantes de clientes y los convierte en conversaciones.</p>
+                            
+                            <div class="bg-black/40 p-4 rounded-xl border border-white/5 font-mono text-xs">
+                                <span class="text-green-500">POST</span> https://api.pymeshub.lat/inbound/email/webhook
+                            </div>
+
+                            <h4 class="text-sm font-bold text-slate-300">Headers requeridos</h4>
+                            <table class="w-full text-xs text-left border-collapse border border-white/5">
+                                <thead class="bg-white/5 text-slate-400 uppercase">
+                                    <tr>
+                                        <th class="p-3 border border-white/5">Header</th>
+                                        <th class="p-3 border border-white/5">Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-slate-500">
+                                    <tr><td class="p-3 border border-white/5 font-mono text-blue-400">svix-id</td><td class="p-3 border border-white/5">ID único del evento Resend</td></tr>
+                                    <tr><td class="p-3 border border-white/5 font-mono text-blue-400">svix-signature</td><td class="p-3 border border-white/5">Firma HMAC SHA256</td></tr>
+                                    <tr><td class="p-3 border border-white/5 font-mono text-blue-400">X-Workspace-Id</td><td class="p-3 border border-white/5">ID del workspace destino</td></tr>
+                                </tbody>
+                            </table>
+
+                            <div class="card-premium p-6 border-white/5 bg-white/2">
+                                <h4 class="text-white font-bold mb-3 text-sm">Payload de ejemplo</h4>
+                                <pre class="font-mono text-[10px] text-blue-400">{
+  "type": "email.inbound",
+  "data": {
+    "from": "cliente@suempresa.com",
+    "subject": "Consulta sobre factura #123",
+    "text": "Buenos días, tengo una pregunta sobre..."
+  }
+}</pre>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp Webhook -->
+                        <div class="space-y-6 pt-10">
+                            <h3 class="text-xl font-bold text-white border-l-4 border-green-500 pl-4">Webhook de WhatsApp (Meta)</h3>
+                            <div class="bg-black/40 p-4 rounded-xl border border-white/5 font-mono text-xs">
+                                <span class="text-green-500">POST</span> https://api.pymeshub.lat/whatsapp/webhook
+                            </div>
+                            
+                            <div class="bg-blue-600/5 p-6 rounded-2xl border border-blue-500/20">
+                                <h4 class="text-blue-400 font-bold mb-2 text-sm">Verificación (GET)</h4>
+                                <p class="text-xs text-slate-400 mb-4">Meta verifica el webhook con una solicitud GET inicial:</p>
+                                <code class="text-[10px] text-slate-300 block bg-black/40 p-3 rounded">?hub.mode=subscribe&hub.verify_token=secreto&hub.challenge=12345</code>
+                            </div>
+
+                            <div class="card-premium p-6 border-white/5">
+                                <h4 class="text-white font-bold mb-4 text-sm">Eventos soportados</h4>
+                                <ul class="text-xs space-y-3">
+                                    <li class="flex items-center gap-2"><span class="bg-blue-600/20 text-blue-400 px-2 py-0.5 rounded font-mono">messages</span> Mensaje recibido de un usuario</li>
+                                    <li class="flex items-center gap-2"><span class="bg-blue-600/20 text-blue-400 px-2 py-0.5 rounded font-mono">message_reads</span> Confirmación de lectura</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Idempotencia -->
+                        <div class="mt-12 p-6 bg-blue-600/10 rounded-2xl border border-blue-500/30">
+                            <h4 class="text-white font-bold mb-3 flex items-center gap-2">
+                                <i class="fa-solid fa-shield-halved text-blue-400"></i> Reintentos e Idempotencia
+                            </h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                PymeHub es idempotente: si recibes el mismo evento dos veces, no se crearán duplicados. 
+                                Para email se usa el <code class="text-blue-400">svix-id</code> y para WhatsApp el <code class="text-blue-400">wamid</code> del mensaje de Meta.
+                            </p>
                         </div>
                     </div>
 
