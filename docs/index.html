@@ -418,6 +418,48 @@
                         </div>
                     </div>
 
+                    <!-- Tareas -->
+                    <div id="endpoint-tasks" class="mb-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3">
+                             <i class="fa-solid fa-list-check text-blue-500"></i> Tareas
+                        </h2>
+                        <div class="bg-white/2 p-6 rounded-2xl border border-white/5">
+                            <span class="bg-green-600/20 text-green-500 px-2 py-0.5 rounded text-[10px] font-black uppercase mb-3 inline-block">POST</span>
+                            <code class="text-white block text-sm mb-4">/api/tasks</code>
+                            <div class="bg-white/5 p-4 rounded-lg font-mono text-xs">
+                                <pre>{
+  "title": "Llamar a cliente",
+  "priority": "HIGH",
+  "due_date": "2025-02-15T10:00:00Z"
+}</pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Documentos -->
+                    <div id="endpoint-documents" class="mb-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3">
+                             <i class="fa-solid fa-file-invoice text-blue-500"></i> Documentos
+                        </h2>
+                        <div class="bg-white/2 p-6 rounded-2xl border border-white/5">
+                            <span class="bg-green-600/20 text-green-500 px-2 py-0.5 rounded text-[10px] font-black uppercase mb-3 inline-block">POST</span>
+                            <code class="text-white block text-sm mb-4">/api/documents/upload</code>
+                            <p class="text-xs text-slate-500 mt-2">Content-Type: multipart/form-data. Límite: 25 MB.</p>
+                        </div>
+                    </div>
+
+                    <!-- Facturación -->
+                    <div id="endpoint-billing" class="mb-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3">
+                             <i class="fa-solid fa-file-circle-check text-blue-500"></i> Facturación
+                        </h2>
+                        <div class="bg-white/2 p-6 rounded-2xl border border-white/5">
+                            <span class="bg-green-600/20 text-green-500 px-2 py-0.5 rounded text-[10px] font-black uppercase mb-3 inline-block">POST</span>
+                            <code class="text-white block text-sm mb-4">/api/invoices</code>
+                            <p class="text-sm text-slate-400">Emisión de facturas electrónicas con integración Hacienda.</p>
+                        </div>
+                    </div>
+
                     <!-- Paginación -->
                     <div class="mt-20 p-8 card-premium bg-blue-600/5 border-blue-500/20">
                         <h3 class="text-white font-bold mb-4">Patrón de Paginación Global</h3>
