@@ -17,6 +17,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    <!-- Subdomain Router -->
+    <script>
+        if (window.location.hostname === 'docs.pymeshub.lat' && window.location.pathname === '/') {
+            window.location.href = '/docs/';
+        }
+    </script>
 </head>
 
 <body class="antialiased overflow-x-hidden">
