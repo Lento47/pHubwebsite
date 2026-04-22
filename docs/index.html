@@ -587,6 +587,200 @@
                              <i class="fa-solid fa-users text-blue-500"></i> CRM de Contactos
                         </h2>
                         <p class="text-slate-400 text-sm">Directorio central con historial 360° de conversaciones, tareas y documentos por cada cliente o proveedor.</p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5">
+                                <h4 class="text-white font-bold mb-2">Tipos de contacto</h4>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="text-[10px] bg-blue-600/20 text-blue-400 px-2 py-1 rounded">CUSTOMER</span>
+                                    <span class="text-[10px] bg-purple-600/20 text-purple-400 px-2 py-1 rounded">VENDOR</span>
+                                    <span class="text-[10px] bg-yellow-600/20 text-yellow-400 px-2 py-1 rounded">LEAD</span>
+                                    <span class="text-[10px] bg-white/10 text-slate-400 px-2 py-1 rounded">OTHER</span>
+                                </div>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5">
+                                <h4 class="text-white font-bold mb-2">Vista 360°</h4>
+                                <p class="text-xs text-slate-500">Cada contacto muestra todas sus conversaciones, tareas asociadas, documentos vinculados y facturas emitidas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Documentos y OCR -->
+                    <div id="documentos-ocr" class="scroll-mt-32 mb-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3">
+                             <i class="fa-solid fa-file-invoice text-blue-500"></i> Documentos y OCR
+                        </h2>
+                        <p class="text-slate-400">Sube archivos (PDF, imágenes, Word) y PymeHub extrae el texto automáticamente con OCR. Los documentos quedan indexados y buscables por contenido.</p>
+
+                        <div class="bg-black/40 p-5 rounded-xl border border-white/5 font-mono text-xs text-center text-slate-400">
+                            Subido → <span class="text-yellow-400">Procesando (OCR)</span> → <span class="text-green-400">Procesado</span> / <span class="text-red-400">Error</span>
+                        </div>
+
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5">
+                                <h4 class="text-white font-bold mb-2 text-sm">Formatos soportados</h4>
+                                <p class="text-xs text-slate-500">PDF, PNG, JPG, JPEG, WEBP, DOCX. Límite de 25 MB por archivo.</p>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5">
+                                <h4 class="text-white font-bold mb-2 text-sm">Almacenamiento</h4>
+                                <p class="text-xs text-slate-500">Cifrado en reposo. Acceso por URL firmada con expiración configurable.</p>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5">
+                                <h4 class="text-white font-bold mb-2 text-sm">Vinculación</h4>
+                                <p class="text-xs text-slate-500">Asocia documentos a contactos o conversaciones específicas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Facturación -->
+                    <div id="facturacion" class="scroll-mt-32 mb-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3">
+                             <i class="fa-solid fa-file-invoice-dollar text-blue-500"></i> Facturación
+                        </h2>
+                        <p class="text-slate-400">Crea facturas, gestiona cobros y emite comprobantes electrónicos directamente a Hacienda de Costa Rica.</p>
+
+                        <div class="bg-black/40 p-4 rounded-xl border border-white/5 font-mono text-xs text-slate-400 text-center">
+                            BORRADOR → ENVIADA → <span class="text-yellow-400">PARCIALMENTE PAGADA</span> → <span class="text-green-400">PAGADA</span>
+                            <span class="block mt-1 text-red-400">↘ VENCIDA &nbsp;&nbsp;</span>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5 space-y-2">
+                                <h4 class="text-white font-bold text-sm">Impuestos soportados</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-[10px] bg-blue-600/20 text-blue-400 px-2 py-1 rounded font-mono">IVA 13%</span>
+                                    <span class="text-[10px] bg-blue-600/20 text-blue-400 px-2 py-1 rounded font-mono">IVA 4%</span>
+                                    <span class="text-[10px] bg-blue-600/20 text-blue-400 px-2 py-1 rounded font-mono">IVA 2%</span>
+                                    <span class="text-[10px] bg-blue-600/20 text-blue-400 px-2 py-1 rounded font-mono">IVA 1%</span>
+                                    <span class="text-[10px] bg-white/10 text-slate-400 px-2 py-1 rounded font-mono">EXO</span>
+                                    <span class="text-[10px] bg-white/10 text-slate-400 px-2 py-1 rounded font-mono">EXE</span>
+                                </div>
+                            </div>
+                            <div class="p-5 bg-green-600/5 rounded-2xl border border-green-500/20 space-y-2">
+                                <h4 class="text-green-400 font-bold text-sm">Hacienda CR</h4>
+                                <p class="text-xs text-slate-400">Emite Factura Electrónica (FE), Tiquete (TE) y Nota de Crédito (NC) con firma digital (.p12) y búsqueda CABYS integrada.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-5 bg-white/2 rounded-2xl border border-white/5">
+                            <h4 class="text-white font-bold mb-3 text-sm">Recordatorios automáticos</h4>
+                            <p class="text-xs text-slate-500">Configura recordatorios de cobro por Email o WhatsApp con texto generado por IA. Envío X días antes del vencimiento o en la fecha exacta.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pipeline de Ventas -->
+                    <div id="pipeline" class="scroll-mt-32 mb-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3">
+                             <i class="fa-solid fa-chart-line text-blue-500"></i> Pipeline de Ventas
+                        </h2>
+                        <p class="text-slate-400">Vista Kanban de todas tus oportunidades comerciales. Sigue cada deal desde el primer contacto hasta el cierre.</p>
+
+                        <div class="bg-black/40 p-4 rounded-xl border border-white/5 font-mono text-[10px] text-slate-400 text-center">
+                            Prospecto → Calificado → Propuesta enviada → Negociación → <span class="text-green-400">Cerrado ✓</span>
+                        </div>
+
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5">
+                                <h4 class="text-white font-bold mb-2 text-sm flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue-500 inline-block"></span> Abierto</h4>
+                                <p class="text-xs text-slate-500">En proceso, todavía en juego.</p>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-green-500/20 bg-green-600/5">
+                                <h4 class="text-green-400 font-bold mb-2 text-sm flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-green-500 inline-block"></span> Ganado 🎉</h4>
+                                <p class="text-xs text-slate-500">Venta cerrada exitosamente.</p>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-red-500/20 bg-red-600/5">
+                                <h4 class="text-red-400 font-bold mb-2 text-sm flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-red-500 inline-block"></span> Perdido</h4>
+                                <p class="text-xs text-slate-500">No se concretó. Documenta el motivo en notas.</p>
+                            </div>
+                        </div>
+
+                        <div class="overflow-hidden rounded-2xl border border-white/5">
+                            <table class="w-full text-xs text-left">
+                                <thead class="bg-white/5 text-slate-400 uppercase">
+                                    <tr>
+                                        <th class="p-3 border-b border-white/5">Métrica</th>
+                                        <th class="p-3 border-b border-white/5">Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-slate-500">
+                                    <tr class="border-b border-white/5 hover:bg-white/2"><td class="p-3 font-bold text-slate-300">Total pipeline</td><td class="p-3">Suma de todos los deals abiertos</td></tr>
+                                    <tr class="border-b border-white/5 hover:bg-white/2"><td class="p-3 font-bold text-slate-300">Tasa de conversión</td><td class="p-3">% deals ganados vs. total cerrados</td></tr>
+                                    <tr class="hover:bg-white/2"><td class="p-3 font-bold text-slate-300">Promedio de ciclo</td><td class="p-3">Tiempo promedio de Prospecto a Cerrado</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Gestión de Tareas -->
+                    <div id="tareas" class="scroll-mt-32 mb-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3">
+                             <i class="fa-solid fa-list-check text-blue-500"></i> Gestión de Tareas
+                        </h2>
+                        <p class="text-slate-400">Gestor de tareas integrado que se conecta directamente con conversaciones, contactos y documentos.</p>
+
+                        <div class="bg-black/40 p-4 rounded-xl border border-white/5 font-mono text-[10px] text-slate-400 text-center">
+                            POR HACER → EN PROGRESO → BLOQUEADA → <span class="text-green-400">COMPLETADA</span> / <span class="text-slate-500">ARCHIVADA</span>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="overflow-hidden rounded-2xl border border-white/5">
+                                <table class="w-full text-xs text-left">
+                                    <thead class="bg-white/5 text-slate-400 uppercase"><tr><th class="p-3 border-b border-white/5">Prioridad</th><th class="p-3 border-b border-white/5">Indicador</th></tr></thead>
+                                    <tbody class="text-slate-500">
+                                        <tr class="border-b border-white/5"><td class="p-3 font-bold text-red-400">Urgente</td><td class="p-3">🔴 Atención inmediata</td></tr>
+                                        <tr class="border-b border-white/5"><td class="p-3 font-bold text-orange-400">Alta</td><td class="p-3">🟠 Hoy o mañana</td></tr>
+                                        <tr class="border-b border-white/5"><td class="p-3 font-bold text-yellow-400">Media</td><td class="p-3">🟡 Esta semana</td></tr>
+                                        <tr><td class="p-3 font-bold text-slate-400">Baja</td><td class="p-3">⚪ Cuando haya tiempo</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5 space-y-3">
+                                <h4 class="text-white font-bold text-sm">Origen de las tareas</h4>
+                                <ul class="text-[10px] text-slate-500 space-y-1">
+                                    <li>✦ <strong class="text-slate-300">Manual</strong> — Creada por un usuario</li>
+                                    <li>✦ <strong class="text-slate-300">Automatización</strong> — Por una regla automática</li>
+                                    <li>✦ <strong class="text-slate-300">Mensaje</strong> — Sugerida por IA al analizar un chat</li>
+                                    <li>✦ <strong class="text-slate-300">OCR</strong> — Generada al procesar un documento</li>
+                                    <li>✦ <strong class="text-slate-300">Resumen IA</strong> — Propuesta en el resumen diario</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Insights con IA -->
+                    <div id="insights" class="scroll-mt-32 mb-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3">
+                             <i class="fa-solid fa-brain text-blue-500"></i> Insights con IA
+                        </h2>
+                        <p class="text-slate-400">Alertas y recomendaciones generadas automáticamente. PymeHub analiza tus métricas mes a mes y te dice exactamente qué ajustar.</p>
+
+                        <div class="p-6 bg-blue-600/10 rounded-2xl border border-blue-500/20">
+                            <h4 class="text-blue-400 font-bold mb-3 text-xs uppercase tracking-widest">Ejemplo de Insight</h4>
+                            <p class="text-sm text-white italic">⚠️ <strong>Tiempo de respuesta aumentó 45%</strong></p>
+                            <p class="text-xs text-slate-400 mt-2">El tiempo promedio de primera respuesta pasó de 2h a 2h 54min esta semana. Considera asignar más agentes al inbox en horas pico (10am–12pm y 3pm–5pm).</p>
+                        </div>
+
+                        <div class="overflow-hidden rounded-2xl border border-white/5">
+                            <table class="w-full text-xs text-left">
+                                <thead class="bg-white/5 text-slate-400 uppercase"><tr><th class="p-3 border-b border-white/5">Severidad</th><th class="p-3 border-b border-white/5">Color</th><th class="p-3 border-b border-white/5">Qué significa</th></tr></thead>
+                                <tbody class="text-slate-500">
+                                    <tr class="border-b border-white/5 hover:bg-white/2"><td class="p-3 font-bold text-blue-400">Bajo</td><td class="p-3">🔵 Azul</td><td class="p-3">Observación informativa</td></tr>
+                                    <tr class="border-b border-white/5 hover:bg-white/2"><td class="p-3 font-bold text-yellow-400">Medio</td><td class="p-3">🟡 Amarillo</td><td class="p-3">Área de mejora identificada</td></tr>
+                                    <tr class="border-b border-white/5 hover:bg-white/2"><td class="p-3 font-bold text-orange-400">Alto</td><td class="p-3">🟠 Naranja</td><td class="p-3">Requiere atención pronto</td></tr>
+                                    <tr class="hover:bg-white/2"><td class="p-3 font-bold text-red-400">Crítico</td><td class="p-3">🔴 Rojo</td><td class="p-3">Impacto serio en la operación</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5">
+                                <h4 class="text-white font-bold mb-2 text-sm">Generación automática</h4>
+                                <p class="text-xs text-slate-500">Job programado a las 6:00 AM (zona del workspace). Compara métricas actuales vs. mes anterior.</p>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5">
+                                <h4 class="text-white font-bold mb-2 text-sm">Resumen diario IA</h4>
+                                <p class="text-xs text-slate-500">Texto en español que resume lo que ocurrió en el negocio el día anterior. Visible en el dashboard cada mañana.</p>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Integración Hacienda -->
