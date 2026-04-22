@@ -17,3 +17,10 @@ node_modules/
 
 # Local deployment tools
 .cloudflare/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
