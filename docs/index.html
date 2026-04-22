@@ -54,10 +54,11 @@
             <div class="space-y-8">
                 <div>
                     <h5 class="text-[10px] uppercase tracking-widest font-black text-slate-500 mb-4">Aprendizaje</h5>
-                    <nav class="space-y-1">
-                        <a href="#introduccion" class="block py-2 px-3 text-sm rounded-lg doc-sidebar-active">Introducción</a>
-                        <a href="#quickstart" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Inicio Rápido</a>
-                        <a href="#planes" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Planes y Límites</a>
+                    <nav class="space-y-1 text-[11px]">
+                        <a href="#que-es-pymehub" class="block py-1.5 px-3 rounded-lg hover:bg-white/5 transition">¿Qué es PymeHub?</a>
+                        <a href="#quickstart" class="block py-1.5 px-3 rounded-lg hover:bg-white/5 transition">Inicio Rápido</a>
+                        <a href="#conceptos-clave" class="block py-1.5 px-3 rounded-lg hover:bg-white/5 transition">Conceptos Clave</a>
+                        <a href="#planes" class="block py-1.5 px-3 rounded-lg hover:bg-white/5 transition">Planes y Límites</a>
                     </nav>
                 </div>
                 <div>
@@ -126,28 +127,79 @@
                         <li><strong>Automatizaciones:</strong> Reglas sin código para ahorrar horas de trabajo.</li>
                     </ul>
 
-                    <h2 id="quickstart">Inicio Rápido (3 pasos)</h2>
-                    <p>Para empezar a ver resultados hoy mismo, sigue estos pasos:</p>
-                    <div class="space-y-4 my-8">
-                        <div class="flex gap-4 items-start p-4 bg-white/2 rounded-xl border border-white/5">
-                            <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center shrink-0 text-white font-black">1</div>
-                            <div>
-                                <h4 class="text-white font-bold">Descarga la App Nativa</h4>
-                                <p class="text-sm">PymeHub corre sobre Tauri 2 para ofrecerte una experiencia Windows ultrarrápida. <a href="https://downloads.pymeshub.lat/Pymeshub%20Cloud_0.1.0_x64-setup.exe" class="text-blue-400 underline">Descargar aquí</a>.</p>
+                    <!-- ¿Qué es PymeHub? -->
+                    <div id="que-es-pymehub" class="scroll-mt-32 mb-20 space-y-8">
+                        <h1 class="text-5xl font-black text-white mb-6">¿Qué es PymeHub?</h1>
+                        <p class="text-xl text-slate-400 leading-relaxed">PymeHub es una <strong>plataforma operativa todo-en-uno</strong> diseñada para PyMEs. Centraliza conversaciones, CRM, tareas, documentos y facturación en un solo ecosistema inteligente.</p>
+                        
+                        <div class="card-premium p-6 border-white/5 bg-blue-600/10">
+                            <h3 class="text-white font-bold mb-2">Propuesta de Valor</h3>
+                            <p class="text-sm text-blue-400 italic">"Tu socio inteligente que te dice exactamente qué ajustar en tu negocio, basado en datos."</p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="space-y-4">
+                                <h4 class="text-white font-bold flex items-center gap-2"><i class="fa-solid fa-layer-group text-blue-500"></i> Multi-tenant</h4>
+                                <p class="text-xs text-slate-500">Cada empresa tiene su propio espacio de trabajo (workspace) completamente aislado.</p>
+                            </div>
+                            <div class="space-y-4">
+                                <h4 class="text-white font-bold flex items-center gap-2"><i class="fa-solid fa-microchip text-blue-500"></i> Inteligencia Artificial</h4>
+                                <p class="text-xs text-slate-500">Analizamos tus datos mes a mes para generar Insights accionables en español.</p>
                             </div>
                         </div>
-                        <div class="flex gap-4 items-start p-4 bg-white/2 rounded-xl border border-white/5">
-                            <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center shrink-0 text-white font-black">2</div>
-                            <div>
-                                <h4 class="text-white font-bold">Vincula tus canales</h4>
-                                <p class="text-sm">Conecta tu cuenta de Gmail y escanea el código QR de WhatsApp en el módulo de Inbox.</p>
+                    </div>
+
+                    <!-- Inicio Rápido -->
+                    <div id="quickstart" class="scroll-mt-32 mb-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3">
+                             <i class="fa-solid fa-bolt text-yellow-500"></i> Inicio Rápido
+                        </h2>
+                        <div class="grid gap-6">
+                            <div class="flex gap-6 items-start">
+                                <div class="w-10 h-10 rounded-full bg-blue-600/20 text-blue-500 flex items-center justify-center font-black shrink-0">1</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Crear tu cuenta</h4>
+                                    <p class="text-xs text-slate-500 text-slate-400">Regístrate en <span class="text-blue-400">pymeshub.lat</span>. Automáticamente serás el Owner de tu nuevo Workspace.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 items-start">
+                                <div class="w-10 h-10 rounded-full bg-blue-600/20 text-blue-500 flex items-center justify-center font-black shrink-0">2</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Conectar Canales</h4>
+                                    <p class="text-xs text-slate-500 text-slate-400">Vincula tu cuenta de Resend (Email) y Meta Cloud API (WhatsApp).</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 items-start">
+                                <div class="w-10 h-10 rounded-full bg-blue-600/20 text-blue-500 flex items-center justify-center font-black shrink-0">3</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Invitar al Equipo</h4>
+                                    <p class="text-xs text-slate-500 text-slate-400">Agrega colaboradores con roles de Admin, Agente o Lector.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="flex gap-4 items-start p-4 bg-white/2 rounded-xl border border-white/5">
-                            <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center shrink-0 text-white font-black">3</div>
-                            <div>
-                                <h4 class="text-white font-bold">Configura Hacienda</h4>
-                                <p class="text-sm">Sube tu llave criptográfica y credenciales de ATV para habilitar la facturación electrónica automática.</p>
+                    </div>
+
+                    <!-- Conceptos Clave -->
+                    <div id="conceptos-clave" class="scroll-mt-32 mb-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3">
+                             <i class="fa-solid fa-key text-blue-500"></i> Conceptos Clave
+                        </h2>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5 hover:border-blue-500/30 transition">
+                                <h4 class="text-white font-bold mb-2">Workspace</h4>
+                                <p class="text-xs text-slate-500">Tu espacio aislado. Contiene todos tus contactos, conversaciones y documentos.</p>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5 hover:border-blue-500/30 transition">
+                                <h4 class="text-white font-bold mb-2">Canales</h4>
+                                <p class="text-xs text-slate-500">Los medios por donde entra la comunicación (Email, WhatsApp, Forms).</p>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5 hover:border-blue-500/30 transition">
+                                <h4 class="text-white font-bold mb-2">Conversaciones</h4>
+                                <p class="text-xs text-slate-500">Hilos de mensajes con estados: Nuevo, Abierto, Pendiente y Resuelto.</p>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5 hover:border-blue-500/30 transition">
+                                <h4 class="text-white font-bold mb-2">Roles</h4>
+                                <p class="text-xs text-slate-500">Owners, Admins, Agentes y Lectores con permisos granulares.</p>
                             </div>
                         </div>
                     </div>
