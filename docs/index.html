@@ -58,7 +58,7 @@
                         <a href="#que-es-pymehub" class="block py-1.5 px-3 rounded-lg hover:bg-white/5 transition">¿Qué es PymeHub?</a>
                         <a href="#quickstart" class="block py-1.5 px-3 rounded-lg hover:bg-white/5 transition">Inicio Rápido</a>
                         <a href="#conceptos-clave" class="block py-1.5 px-3 rounded-lg hover:bg-white/5 transition">Conceptos Clave</a>
-                        <a href="#planes" class="block py-1.5 px-3 rounded-lg hover:bg-white/5 transition">Planes y Precios</a>
+                        <a href="#planes" class="block py-1.5 px-3 rounded-lg hover:bg-white/5 transition border-b border-white/5 pb-2">Planes y Precios</a>
                     </nav>
                 </div>
                 <div>
@@ -96,6 +96,15 @@
                             <a href="#endpoint-billing" class="block py-1 text-xs text-slate-500 hover:text-blue-400">Facturación</a>
                         </div>
                         <a href="#api-webhooks" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Webhooks</a>
+                    </nav>
+                </div>
+                <div>
+                    <h5 class="text-[10px] uppercase tracking-widest font-black text-slate-500 mb-4">Recursos</h5>
+                    <nav class="space-y-1 text-[11px]">
+                        <a href="#prompts" class="block py-1.5 px-3 rounded-lg hover:bg-white/5 transition flex items-center gap-2">
+                            <i class="fa-solid fa-wand-magic-sparkles text-blue-500 text-[9px]"></i> Generador con IA
+                        </a>
+                        <a href="../terminos.html" class="block py-1.5 px-3 rounded-lg hover:bg-white/5 transition">Legal</a>
                     </nav>
                 </div>
             </div>
@@ -709,6 +718,73 @@
     "total_pages": 6
   }
 }</pre>
+                        </div>
+                    </div>
+
+                    <!-- Prompts de Contenido IA -->
+                    <div id="prompts" class="scroll-mt-32 mt-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3">
+                            <i class="fa-solid fa-wand-magic-sparkles text-blue-500"></i> Generador con IA
+                        </h2>
+                        <p class="text-slate-400">Usa estos prompts en Claude, ChatGPT o Gemini para generar al instante documentación, blogs o respuestas de soporte consistentes con la voz de PymeHub.</p>
+
+                        <!-- Contexto Maestro -->
+                        <div class="bg-black/40 p-6 rounded-2xl border border-blue-500/20">
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="text-blue-400 font-bold text-xs uppercase tracking-widest">Contexto Maestro &mdash; Copiar Siempre Primero</h4>
+                                <span class="text-[9px] bg-blue-600/20 text-blue-400 px-2 py-1 rounded">Bloque Base</span>
+                            </div>
+                            <pre class="text-[10px] text-slate-400 font-mono leading-relaxed overflow-auto">PymeHub es una plataforma SaaS B2B multi-tenant para PyMEs hispanohablantes.
+Funcionalidades: Inbox unificado (Email+WhatsApp), CRM, Tareas, Documentos+OCR,
+Automatizaciones, Insights IA, Facturación Electrónica (Hacienda CR), Pipeline Kanban.
+Stack: NestJS + PostgreSQL + React + Tauri 2 (Desktop Windows).
+Propuesta: "Tu socio inteligente que te dice qué ajustar en tu negocio."
+Planes: Free (3u/100MB), Starter (10u/5GB), Growth (25u/50GB), Enterprise (ilimitado).
+Tono: español latinoamericano, profesional pero cercano. No jerga técnica innecesaria.</pre>
+                        </div>
+
+                        <!-- Grid de Prompts -->
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5 space-y-3">
+                                <h4 class="text-white font-bold text-sm flex items-center gap-2"><i class="fa-solid fa-book text-blue-400 text-xs"></i> Guía Paso a Paso</h4>
+                                <p class="text-[10px] text-slate-500">Crea una guía práctica sobre cómo <em>[TEMA]</em> en PymeHub. Máx 800 palabras, pasos numerados, tono no técnico.</p>
+                                <span class="text-[9px] text-blue-400 font-mono">Uso: documentación de usuario</span>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5 space-y-3">
+                                <h4 class="text-white font-bold text-sm flex items-center gap-2"><i class="fa-solid fa-circle-question text-yellow-400 text-xs"></i> FAQ del Módulo</h4>
+                                <p class="text-[10px] text-slate-500">Genera 8-10 preguntas frecuentes sobre <em>[MÓDULO]</em>. Respuestas de 2-4 oraciones directas.</p>
+                                <span class="text-[9px] text-yellow-400 font-mono">Uso: sección de ayuda</span>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5 space-y-3">
+                                <h4 class="text-white font-bold text-sm flex items-center gap-2"><i class="fa-solid fa-newspaper text-green-400 text-xs"></i> Artículo de Blog SEO</h4>
+                                <p class="text-[10px] text-slate-500">Escribe un blog de 600-800 palabras sobre <em>[TEMA]</em> con keyword <em>[PALABRA CLAVE]</em>. CTA suave al final.</p>
+                                <span class="text-[9px] text-green-400 font-mono">Uso: marketing de contenidos</span>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5 space-y-3">
+                                <h4 class="text-white font-bold text-sm flex items-center gap-2"><i class="fa-solid fa-headset text-red-400 text-xs"></i> Respuesta de Soporte</h4>
+                                <p class="text-[10px] text-slate-500">Un cliente pregunta: <em>"[PREGUNTA]"</em>. Respuesta empática, clara, máx 150 palabras. Firma el equipo de PymeHub.</p>
+                                <span class="text-[9px] text-red-400 font-mono">Uso: soporte al cliente</span>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5 space-y-3">
+                                <h4 class="text-white font-bold text-sm flex items-center gap-2"><i class="fa-solid fa-envelope text-purple-400 text-xs"></i> Email de Onboarding</h4>
+                                <p class="text-[10px] text-slate-500">Email de bienvenida para nuevo usuario. Asunto &lt;50 caracteres, 3 primeras acciones, lectura 2 min máx.</p>
+                                <span class="text-[9px] text-purple-400 font-mono">Uso: email marketing</span>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5 space-y-3">
+                                <h4 class="text-white font-bold text-sm flex items-center gap-2"><i class="fa-solid fa-industry text-orange-400 text-xs"></i> Caso de Uso por Industria</h4>
+                                <p class="text-[10px] text-slate-500">Caso real de 400-500 palabras para <em>[SECTOR]</em> (empresa ficticia CR). Incluye problemas, solución y resultados con números.</p>
+                                <span class="text-[9px] text-orange-400 font-mono">Uso: ventas y demos</span>
+                            </div>
+                        </div>
+
+                        <div class="p-5 bg-blue-600/5 rounded-2xl border border-blue-500/20">
+                            <h4 class="text-white font-bold mb-2 text-xs">Tips para mejores resultados</h4>
+                            <ul class="text-[10px] text-slate-400 space-y-1">
+                                <li>✓ Siempre incluye el bloque de contexto maestro al inicio</li>
+                                <li>✓ Sé específico: indica el módulo, audiencia y formato deseado</li>
+                                <li>✓ Pide iteraciones: "Ahora házlo más corto / en formato tabla"</li>
+                                <li>✓ Verifica siempre los números y funcionalidades generadas</li>
+                            </ul>
                         </div>
                     </div>
                 </section>
