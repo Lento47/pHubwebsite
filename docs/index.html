@@ -745,36 +745,82 @@ Tono: español latinoamericano, profesional pero cercano. No jerga técnica inne
 
                         <!-- Grid de Prompts -->
                         <div class="grid md:grid-cols-2 gap-6">
+
+                            <!-- Documentación -->
+                            <div class="col-span-2">
+                                <h4 class="text-[9px] uppercase tracking-widest text-slate-600 font-black mb-3">📚 Documentación Técnica</h4>
+                            </div>
                             <div class="p-5 bg-white/2 rounded-2xl border border-white/5 space-y-3">
                                 <h4 class="text-white font-bold text-sm flex items-center gap-2"><i class="fa-solid fa-book text-blue-400 text-xs"></i> Guía Paso a Paso</h4>
-                                <p class="text-[10px] text-slate-500">Crea una guía práctica sobre cómo <em>[TEMA]</em> en PymeHub. Máx 800 palabras, pasos numerados, tono no técnico.</p>
-                                <span class="text-[9px] text-blue-400 font-mono">Uso: documentación de usuario</span>
+                                <p class="text-[10px] text-slate-500">Crea una guía práctica sobre cómo <em>[TEMA]</em> en PymeHub. Máx 800 palabras, pasos numerados, tono no técnico. Incluye requisitos previos y resultado esperado.</p>
+                                <span class="text-[9px] text-blue-400 font-mono">Uso: manual de usuario</span>
                             </div>
                             <div class="p-5 bg-white/2 rounded-2xl border border-white/5 space-y-3">
                                 <h4 class="text-white font-bold text-sm flex items-center gap-2"><i class="fa-solid fa-circle-question text-yellow-400 text-xs"></i> FAQ del Módulo</h4>
-                                <p class="text-[10px] text-slate-500">Genera 8-10 preguntas frecuentes sobre <em>[MÓDULO]</em>. Respuestas de 2-4 oraciones directas.</p>
+                                <p class="text-[10px] text-slate-500">Genera 8-10 preguntas frecuentes sobre <em>[MÓDULO]</em>. Respuestas de 2-4 oraciones directas en lenguaje de dueño de negocio.</p>
                                 <span class="text-[9px] text-yellow-400 font-mono">Uso: sección de ayuda</span>
                             </div>
                             <div class="p-5 bg-white/2 rounded-2xl border border-white/5 space-y-3">
+                                <h4 class="text-white font-bold text-sm flex items-center gap-2"><i class="fa-solid fa-code text-cyan-400 text-xs"></i> Documentar Endpoint API</h4>
+                                <p class="text-[10px] text-slate-500">Dado <em>[ENDPOINT]</em>, genera documentación técnica: descripción, URL/método, headers, parámetros, ejemplo cURL, respuesta JSON y errores posibles.</p>
+                                <span class="text-[9px] text-cyan-400 font-mono">Uso: referencia API</span>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5 space-y-3">
+                                <h4 class="text-white font-bold text-sm flex items-center gap-2"><i class="fa-solid fa-lightbulb text-amber-400 text-xs"></i> Explicar Concepto Simple</h4>
+                                <p class="text-[10px] text-slate-500">Explica <em>[CONCEPTO]</em> (ej: webhooks, OCR, multi-tenancy) en máx 300 palabras. Usa analogías de negocios, sin jerga técnica.</p>
+                                <span class="text-[9px] text-amber-400 font-mono">Uso: glosario / onboarding</span>
+                            </div>
+
+                            <!-- Marketing -->
+                            <div class="col-span-2 pt-4">
+                                <h4 class="text-[9px] uppercase tracking-widest text-slate-600 font-black mb-3">📣 Marketing y Ventas</h4>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5 space-y-3">
                                 <h4 class="text-white font-bold text-sm flex items-center gap-2"><i class="fa-solid fa-newspaper text-green-400 text-xs"></i> Artículo de Blog SEO</h4>
-                                <p class="text-[10px] text-slate-500">Escribe un blog de 600-800 palabras sobre <em>[TEMA]</em> con keyword <em>[PALABRA CLAVE]</em>. CTA suave al final.</p>
+                                <p class="text-[10px] text-slate-500">Blog de 600-800 palabras sobre <em>[TEMA]</em> con keyword <em>[PALABRA CLAVE]</em>. Empieza con dolor del cliente, 2-3 ejemplos CR/LATAM, CTA suave al final.</p>
                                 <span class="text-[9px] text-green-400 font-mono">Uso: marketing de contenidos</span>
                             </div>
                             <div class="p-5 bg-white/2 rounded-2xl border border-white/5 space-y-3">
-                                <h4 class="text-white font-bold text-sm flex items-center gap-2"><i class="fa-solid fa-headset text-red-400 text-xs"></i> Respuesta de Soporte</h4>
-                                <p class="text-[10px] text-slate-500">Un cliente pregunta: <em>"[PREGUNTA]"</em>. Respuesta empática, clara, máx 150 palabras. Firma el equipo de PymeHub.</p>
-                                <span class="text-[9px] text-red-400 font-mono">Uso: soporte al cliente</span>
-                            </div>
-                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5 space-y-3">
                                 <h4 class="text-white font-bold text-sm flex items-center gap-2"><i class="fa-solid fa-envelope text-purple-400 text-xs"></i> Email de Onboarding</h4>
-                                <p class="text-[10px] text-slate-500">Email de bienvenida para nuevo usuario. Asunto &lt;50 caracteres, 3 primeras acciones, lectura 2 min máx.</p>
+                                <p class="text-[10px] text-slate-500">Email de bienvenida 5 min después del registro. Asunto &lt;50 chars, tono cálido, 3 primeras acciones con links, oferta de ayuda. Firma: equipo PymeHub.</p>
                                 <span class="text-[9px] text-purple-400 font-mono">Uso: email marketing</span>
                             </div>
                             <div class="p-5 bg-white/2 rounded-2xl border border-white/5 space-y-3">
+                                <h4 class="text-white font-bold text-sm flex items-center gap-2"><i class="fa-solid fa-table-columns text-indigo-400 text-xs"></i> Comparativa vs. Herramientas</h4>
+                                <p class="text-[10px] text-slate-500">Tabla comparativa de PymeHub vs. usar WhatsApp Web + HubSpot + Trello + Google Drive + Excel por separado. Énfasis en costo total y tiempo perdido.</p>
+                                <span class="text-[9px] text-indigo-400 font-mono">Uso: ventas / demos</span>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5 space-y-3">
                                 <h4 class="text-white font-bold text-sm flex items-center gap-2"><i class="fa-solid fa-industry text-orange-400 text-xs"></i> Caso de Uso por Industria</h4>
-                                <p class="text-[10px] text-slate-500">Caso real de 400-500 palabras para <em>[SECTOR]</em> (empresa ficticia CR). Incluye problemas, solución y resultados con números.</p>
+                                <p class="text-[10px] text-slate-500">Caso de 400-500 palabras para <em>[SECTOR]</em> (empresa ficticia CR). Problemas anteriores, cómo usa cada módulo, resultados con números y cita del dueño.</p>
                                 <span class="text-[9px] text-orange-400 font-mono">Uso: ventas y demos</span>
                             </div>
+
+                            <!-- Soporte y Análisis -->
+                            <div class="col-span-2 pt-4">
+                                <h4 class="text-[9px] uppercase tracking-widest text-slate-600 font-black mb-3">🛠️ Soporte y Análisis</h4>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5 space-y-3">
+                                <h4 class="text-white font-bold text-sm flex items-center gap-2"><i class="fa-solid fa-headset text-red-400 text-xs"></i> Respuesta de Soporte</h4>
+                                <p class="text-[10px] text-slate-500">Un cliente pregunta: <em>"[PREGUNTA]"</em>. Respuesta empática y directa, máx 150 palabras, con pasos si aplica. Firma: Equipo de soporte PymeHub.</p>
+                                <span class="text-[9px] text-red-400 font-mono">Uso: soporte al cliente</span>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5 space-y-3">
+                                <h4 class="text-white font-bold text-sm flex items-center gap-2"><i class="fa-solid fa-rocket text-pink-400 text-xs"></i> Notas de Versión</h4>
+                                <p class="text-[10px] text-slate-500">Dado <em>[LISTA DE CAMBIOS TÉCNICOS]</em>, genera release notes para la versión <em>[X.Y.Z]</em> en secciones: Nuevas funciones, Mejoras, Correcciones. Tono accesible, sin jerga.</p>
+                                <span class="text-[9px] text-pink-400 font-mono">Uso: comunicación de producto</span>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5 space-y-3">
+                                <h4 class="text-white font-bold text-sm flex items-center gap-2"><i class="fa-solid fa-chart-bar text-teal-400 text-xs"></i> Analizar Feedback</h4>
+                                <p class="text-[10px] text-slate-500">Dado <em>[COMENTARIOS DE CLIENTES]</em>, genera: top 3 temas, sentimiento general, funcionalidades más mencionadas, fricciones y 2 recomendaciones de mejora.</p>
+                                <span class="text-[9px] text-teal-400 font-mono">Uso: product management</span>
+                            </div>
+                            <div class="p-5 bg-white/2 rounded-2xl border border-white/5 space-y-3">
+                                <h4 class="text-white font-bold text-sm flex items-center gap-2"><i class="fa-solid fa-database text-lime-400 text-xs"></i> Datos para Demo</h4>
+                                <p class="text-[10px] text-slate-500">Genera datos realistas para demo de <em>[TIPO DE EMPRESA]</em> en CR: 5 contactos ticos, 3 conversaciones activas, 4 tareas, 2 facturas, 3 insights y 1 resumen IA.</p>
+                                <span class="text-[9px] text-lime-400 font-mono">Uso: demos de ventas</span>
+                            </div>
+
                         </div>
 
                         <div class="p-5 bg-blue-600/5 rounded-2xl border border-blue-500/20">
