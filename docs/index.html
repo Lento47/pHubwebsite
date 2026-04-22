@@ -80,7 +80,7 @@
                             <a href="#endpoint-tasks" class="block py-1 text-xs text-slate-500 hover:text-blue-400">Tareas</a>
                             <a href="#endpoint-billing" class="block py-1 text-xs text-slate-500 hover:text-blue-400">Facturación</a>
                         </div>
-                        <a href="#" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Webhooks</a>
+                        <a href="#api-webhooks" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Webhooks</a>
                     </nav>
                 </div>
             </div>
@@ -423,15 +423,16 @@
                         <h2 class="text-3xl font-bold flex items-center gap-3">
                              <i class="fa-solid fa-list-check text-blue-500"></i> Tareas
                         </h2>
-                        <div class="bg-white/2 p-6 rounded-2xl border border-white/5">
-                            <span class="bg-green-600/20 text-green-500 px-2 py-0.5 rounded text-[10px] font-black uppercase mb-3 inline-block">POST</span>
-                            <code class="text-white block text-sm mb-4">/api/tasks</code>
-                            <div class="bg-white/5 p-4 rounded-lg font-mono text-xs">
-                                <pre>{
-  "title": "Llamar a cliente",
-  "priority": "HIGH",
-  "due_date": "2025-02-15T10:00:00Z"
-}</pre>
+                        <div class="space-y-6">
+                            <div class="bg-white/2 p-6 rounded-2xl border border-white/5">
+                                <span class="bg-blue-600/20 text-blue-500 px-2 py-0.5 rounded text-[10px] font-black uppercase mb-2 inline-block">GET</span>
+                                <code class="text-white block mb-2">/api/tasks?status=TODO</code>
+                                <p class="text-sm text-slate-400">Listado de tareas con filtros de estado.</p>
+                            </div>
+                            <div class="bg-white/2 p-6 rounded-2xl border border-white/5">
+                                <span class="bg-green-600/20 text-green-500 px-2 py-0.5 rounded text-[10px] font-black uppercase mb-2 inline-block">POST</span>
+                                <code class="text-white block mb-2">/api/tasks/{id}/complete</code>
+                                <p class="text-sm text-slate-400">Marca una tarea como completada.</p>
                             </div>
                         </div>
                     </div>
@@ -444,7 +445,7 @@
                         <div class="bg-white/2 p-6 rounded-2xl border border-white/5">
                             <span class="bg-green-600/20 text-green-500 px-2 py-0.5 rounded text-[10px] font-black uppercase mb-3 inline-block">POST</span>
                             <code class="text-white block text-sm mb-4">/api/documents/upload</code>
-                            <p class="text-xs text-slate-500 mt-2">Content-Type: multipart/form-data. Límite: 25 MB.</p>
+                            <p class="text-xs text-slate-500 mt-2">Límite: 25 MB. Formato: Multipart/form-data.</p>
                         </div>
                     </div>
 
@@ -453,10 +454,27 @@
                         <h2 class="text-3xl font-bold flex items-center gap-3">
                              <i class="fa-solid fa-file-circle-check text-blue-500"></i> Facturación
                         </h2>
-                        <div class="bg-white/2 p-6 rounded-2xl border border-white/5">
-                            <span class="bg-green-600/20 text-green-500 px-2 py-0.5 rounded text-[10px] font-black uppercase mb-3 inline-block">POST</span>
-                            <code class="text-white block text-sm mb-4">/api/invoices</code>
-                            <p class="text-sm text-slate-400">Emisión de facturas electrónicas con integración Hacienda.</p>
+                        <div class="space-y-6">
+                            <div class="bg-white/2 p-6 rounded-2xl border border-white/5">
+                                <span class="bg-blue-600/20 text-blue-500 px-2 py-0.5 rounded text-[10px] font-black uppercase mb-2 inline-block">POST</span>
+                                <code class="text-white block mb-2">/api/invoices</code>
+                                <p class="text-sm text-slate-400">Emisión de facturas electrónicas vía API.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Webhooks -->
+                    <div id="api-webhooks" class="scroll-mt-32 mb-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3 text-white">
+                             <i class="fa-solid fa-bolt text-blue-500"></i> Webhooks
+                        </h2>
+                        <div class="card-premium p-6 border-white/5">
+                            <h4 class="text-white font-bold mb-4">Eventos principales</h4>
+                            <ul class="text-xs space-y-2 font-mono text-blue-400 list-disc pl-4">
+                                <li>MESSAGE_RECEIVED</li>
+                                <li>CONTACT_CREATED</li>
+                                <li>INVOICE_PAID</li>
+                            </ul>
                         </div>
                     </div>
 
