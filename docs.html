@@ -63,10 +63,9 @@
                 <div>
                     <h5 class="text-[10px] uppercase tracking-widest font-black text-slate-500 mb-4">Módulos Core</h5>
                     <nav class="space-y-1">
-                        <a href="#" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Inbox Unificado</a>
+                        <a href="#inbox" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Inbox & FAQ</a>
                         <a href="#" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Facturación Electrónica</a>
                         <a href="#" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">CRM y Kanban</a>
-                        <a href="#" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Automatizaciones</a>
                     </nav>
                 </div>
                 <div>
@@ -264,6 +263,72 @@
                             <p class="text-xs text-slate-400 m-0">
                                 Cada vez que renuevas el token, PymeHub emite un nuevo refresh token y el anterior queda inválido automáticamente. Esto protege tu cuenta contra robo de sesiones.
                             </p>
+                        </div>
+                    </div>
+                <!-- INBOX & FAQ SECTION -->
+                <section id="inbox" class="scroll-mt-32">
+                    <div class="flex items-center gap-2 text-blue-500 text-sm font-bold mb-4">
+                        <i class="fa-solid fa-comments"></i> MÓDULOS CORE
+                    </div>
+                    <h1 class="text-5xl font-black text-white mb-6">Inbox y Gestión de conversaciones</h1>
+                    <p class="text-xl text-slate-400">Centraliza Email y WhatsApp en una sola plataforma para que tu equipo nunca pierda un lead.</p>
+
+                    <h2>Guía: Asignar WhatsApp a Ventas Automáticamente</h2>
+                    <p>Optimiza la respuesta inicial de tu equipo configurando reglas inteligentes que asignen conversaciones según palabras clave o etiquetas.</p>
+                    
+                    <div class="bg-white/2 border border-white/5 rounded-2xl p-8 space-y-6">
+                        <h4 class="text-white font-bold">Lo que necesitas antes de empezar:</h4>
+                        <ul class="text-sm">
+                            <li>Cuenta activa en PymeHub (Plan Starter o superior).</li>
+                            <li>WhatsApp Business vinculado satisfactoriamente.</li>
+                            <li>Al menos dos usuarios con el rol de <strong>Agente</strong> o <strong>Vendedor</strong>.</li>
+                        </ul>
+
+                        <h3 class="text-white">Pasos Detallados</h3>
+                        <div class="space-y-4">
+                            <div class="flex gap-4">
+                                <span class="text-blue-500 font-black">1.</span>
+                                <div>
+                                    <p class="text-sm font-bold text-white mb-1">Entrar a Automatizaciones</p>
+                                    <p class="text-xs text-slate-500">Ve al menú lateral y haz clic en el icono de rayo (<i class="fa-solid fa-bolt"></i>). Dale al botón "Nueva Regla".</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <span class="text-blue-500 font-black">2.</span>
+                                <div>
+                                    <p class="text-sm font-bold text-white mb-1">Configurar el Disparador (Trigger)</p>
+                                    <p class="text-xs text-slate-500">Selecciona "Nuevo Mensaje Entrante". En los filtros, elige "Canal: WhatsApp".</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <span class="text-blue-500 font-black">3.</span>
+                                <div>
+                                    <p class="text-sm font-bold text-white mb-1">Definir la Acción</p>
+                                    <p class="text-xs text-slate-500">Elige la acción "Asignar a Usuario o Equipo". Selecciona a tu equipo de "Ventas" o usa el método "Round Robin" (uno para cada uno).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-premium p-6 mt-8 border-yellow-500/10 bg-yellow-500/5">
+                        <p class="text-xs text-slate-400 m-0">
+                            <strong>Tip Pro:</strong> Si añades una condición de "Horario Laboral", puedes configurar que fuera de oficina se envíe un mensaje automático de "Te atenderemos mañana".
+                        </p>
+                    </div>
+
+                    <h2 class="mt-20">Preguntas Frecuentes (FAQ)</h2>
+                    <div class="grid gap-6">
+                        <div class="p-6 bg-white/2 rounded-xl border border-white/5">
+                            <p class="text-white font-bold mb-2">¿Puedo usar mi número actual de WhatsApp?</p>
+                            <p class="text-sm text-slate-400">Sí, PymeHub funciona con cualquier número de WhatsApp mediante escaneo de código QR (Multi-device). No necesitas cambiar de SIM ni de número.</p>
+                        </div>
+                        <div class="p-6 bg-white/2 rounded-xl border border-white/5">
+                            <p class="text-white font-bold mb-2">¿Mis clientes verán que uso PymeHub?</p>
+                            <p class="text-sm text-slate-400">No, la comunicación es transparente. El cliente sigue recibiendo mensajes normales de WhatsApp o Email, mientras tú gestionas todo desde nuestro Inbox profesional.</p>
+                        </div>
+                        <div class="p-6 bg-white/2 rounded-xl border border-white/5">
+                            <p class="text-white font-bold mb-2">¿Cómo funciona la IA en el Inbox?</p>
+                            <p class="text-sm text-slate-400">La IA analiza el tono del cliente y te sugiere respuestas rápidas basadas en tu historial. También genera resúmenes diarios de los temas más hablados.</p>
                         </div>
                     </div>
                 </section>
