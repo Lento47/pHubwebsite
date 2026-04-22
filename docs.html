@@ -72,7 +72,8 @@
                 <div>
                     <h5 class="text-[10px] uppercase tracking-widest font-black text-slate-500 mb-4">Desarrolladores</h5>
                     <nav class="space-y-1">
-                        <a href="#" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Referencia API</a>
+                        <a href="#api-auth" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Autenticación API</a>
+                        <a href="#" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Referencia General</a>
                         <a href="#" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Webhooks</a>
                     </nav>
                 </div>
@@ -177,6 +178,93 @@
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                </section>
+
+                <hr class="border-white/5 my-20">
+
+                <!-- API AUTH SECTION -->
+                <section id="api-auth" class="scroll-mt-32">
+                    <div class="flex items-center gap-2 text-blue-500 text-sm font-bold mb-4">
+                        <i class="fa-solid fa-key"></i> DESARROLLADORES
+                    </div>
+                    <h1 class="text-5xl font-black text-white mb-6">Autenticación API</h1>
+                    <p class="text-xl text-slate-400">La API de PymeHub usa <strong>JWT (JSON Web Tokens)</strong> con un sistema de <em>refresh tokens</em> para sesiones seguras de larga duración.</p>
+
+                    <h3>URL Base</h3>
+                    <div class="bg-black/40 rounded-xl p-4 border border-white/5 font-mono text-blue-400 mb-8 self-start inline-block">
+                        https://api.pymeshub.lat
+                    </div>
+
+                    <h3>Formato de Respuesta</h3>
+                    <p>Todas las respuestas son JSON con la siguiente estructura estándar:</p>
+                    <div class="grid md:grid-cols-2 gap-4 my-6 font-mono text-xs">
+                        <div class="bg-white/2 p-4 rounded-lg border border-green-500/10">
+                            <div class="text-green-500 mb-2">// 200 OK</div>
+                            <pre class="text-slate-400">
+{
+  "data": { ... },
+  "message": "OK"
+}</pre>
+                        </div>
+                        <div class="bg-white/2 p-4 rounded-lg border border-red-500/10">
+                            <div class="text-red-500 mb-2">// 401 Error</div>
+                            <pre class="text-slate-400">
+{
+  "statusCode": 401,
+  "message": "Token inválido",
+  "error": "Unauthorized"
+}</pre>
+                        </div>
+                    </div>
+
+                    <h3>Endpoints Principales</h3>
+                    
+                    <div class="space-y-12 mt-10">
+                        <!-- Register -->
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <span class="bg-green-600/20 text-green-500 px-2 py-0.5 rounded text-xs font-black">POST</span>
+                                <code class="text-white">/api/auth/register</code>
+                            </div>
+                            <p class="text-sm">Crea una nueva cuenta y workspace de forma programática.</p>
+                            <div class="bg-black/60 p-4 rounded-xl text-xs font-mono">
+                                <span class="text-slate-500">REQUEST BODY:</span>
+                                <pre class="mt-2">{
+  "email": "tu@empresa.com",
+  "password": "contraseña-segura",
+  "name": "Tu Nombre",
+  "workspace_name": "Mi Empresa S.A."
+}</pre>
+                            </div>
+                        </div>
+
+                        <!-- Login -->
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <span class="bg-green-600/20 text-green-500 px-2 py-0.5 rounded text-xs font-black">POST</span>
+                                <code class="text-white">/api/auth/login</code>
+                            </div>
+                            <p class="text-sm">Obtiene tokens de acceso iniciales.</p>
+                        </div>
+
+                        <!-- Using Token -->
+                        <div class="bg-blue-600/5 p-6 rounded-2xl border border-blue-500/20">
+                            <h4 class="text-white font-bold mb-4">Cómo usar el token</h4>
+                            <p class="text-sm mb-4">Incluye el <code>access_token</code> en el header de todas las peticiones:</p>
+                            <div class="bg-black/20 p-3 rounded-lg text-sm font-mono text-blue-300">
+                                Authorization: Bearer {token}
+                            </div>
+                        </div>
+
+                        <div class="card-premium p-6 border-yellow-500/20 bg-yellow-500/5">
+                            <h4 class="text-white font-bold mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-triangle-exclamation text-yellow-500"></i> Rotación de Refresh Tokens
+                            </h4>
+                            <p class="text-xs text-slate-400 m-0">
+                                Cada vez que renuevas el token, PymeHub emite un nuevo refresh token y el anterior queda inválido automáticamente. Esto protege tu cuenta contra robo de sesiones.
+                            </p>
+                        </div>
                     </div>
                 </section>
             </div>
