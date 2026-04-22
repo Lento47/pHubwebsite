@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso Aceptable | PymesHub</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="antialiased bg-grid relative text-slate-900">
+    <div id="page-wrapper">
+        <nav class="fixed top-0 left-0 right-0 z-50 glass transition-all duration-300 py-6">
+            <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-200 group-hover:rotate-6 transition-transform">
+                        <i class="fa-solid fa-layer-group text-white text-lg"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-slate-900 tracking-tight">PymesHub</span>
+                </a>
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-slate-200 transition-colors" title="Cambiar Tema">
+                        <i class="fa-solid fa-palette text-slate-600"></i>
+                    </button>
+                    <a href="index.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Volver
+                    </a>
+                </div>
+            </div>
+        </nav>
+    <main class="flex-grow pt-40 pb-20">
+        <div class="max-w-4xl mx-auto px-6 bg-white p-12 rounded-3xl border border-slate-200 shadow-sm content-section">
+            <h1 class="text-4xl font-black mb-8 text-[var(--brand-primary)]">Política de Uso Aceptable</h1>
+            <p class="text-slate-500 mb-8 italic">Última actualización: 21 de abril de 2024</p>
+            
+            <div class="prose prose-slate max-w-none text-slate-600 space-y-10">
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">Propósito</h2>
+                    <p>Esta política define los usos prohibidos y controles mínimos para proteger PymeHub, a otros clientes, a terceros y a <strong>Otnel S.A.</strong> Aplica a todo usuario, cliente, proveedor o integración que utilice el servicio.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">Usos Permitidos</h2>
+                    <p>PymeHub debe usarse exclusivamente para operaciones legítimas de negocio relacionadas con la gestión de conversaciones, clientes, tareas, documentos, automatizaciones y reportes internos del cliente.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">Usos Prohibidos</h2>
+                    <p>Se prohíbe terminantemente usar PymeHub para:</p>
+                    <ul class="list-disc pl-6 mt-4 space-y-3">
+                        <li><strong>Spam y Abuso:</strong> Envío masivo no consentido o campañas abusivas.</li>
+                        <li><strong>Fraude:</strong> Suplantación, phishing, estafas o engaño comercial.</li>
+                        <li><strong>Malware:</strong> Distribuir enlaces maliciosos o archivos nocivos.</li>
+                        <li><strong>Acceso no autorizado:</strong> Scraping del servicio, APIs o datos de otros clientes (tenants).</li>
+                        <li><strong>Saturación:</strong> Acciones que degraden el rendimiento de la API o los workers (DoS/DDoS).</li>
+                        <li><strong>Ilegalidad:</strong> Cargar documentos falsificados o que infrinjan derechos de propiedad intelectual.</li>
+                        <li><strong>IA Segura:</strong> Usar OCR o IA para decisiones automáticas sensibles sin validación humana adecuada.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">Consecuencias</h2>
+                    <p><strong>Otnel S.A.</strong> puede investigar, limitar, suspender o terminar accesos de forma inmediata cuando detecte un uso prohibido o riesgo grave para la infraestructura o terceros.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">Cooperación del Cliente</h2>
+                    <p>El cliente debe colaborar con investigaciones de seguridad razonables, corregir configuraciones inseguras y asumir responsabilidad total por las acciones de sus usuarios y contratistas dentro de su workspace.</p>
+                </section>
+            </div>
+            
+            <div class="mt-12 p-8 bg-amber-50 rounded-3xl border border-amber-100 flex gap-6 items-start">
+                <i class="fa-solid fa-triangle-exclamation text-amber-600 text-2xl mt-1"></i>
+                <div>
+                    <p class="text-amber-900 font-bold mb-1">Reporte de Abuso</p>
+                    <p class="text-amber-700 text-sm italic">Si detecta un uso indebido de nuestra plataforma, por favor repórtelo de inmediato a <span class="font-bold">info@pymeshub.lat</span>.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-950 pt-20 pb-10 text-slate-400">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white">
+                            <i class="fa-solid fa-layer-group text-lg"></i>
+                        </div>
+                        <span class="text-2xl font-bold tracking-tight text-white">PymesHUB</span>
+                    </div>
+                    <p class="text-lg max-w-sm">Empoderando a las PyMEs de Costa Rica con tecnología intuitiva y soporte humano. Liderando la transformación digital empresarial en el país.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Plataforma</h4>
+                    <ul class="space-y-4">
+                        <li><a href="index.html#features" class="hover:text-white transition">Funcionalidades</a></li>
+                        <li><a href="seguridad.html" class="hover:text-white transition">Seguridad</a></li>
+                        <li><a href="index.html#pricing" class="hover:text-white transition">Planes y Precios</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Legal</h4>
+                    <ul class="space-y-4">
+                        <li><a href="privacidad.html" class="hover:text-white transition">Privacidad</a></li>
+                        <li><a href="terminos.html" class="hover:text-white transition">Términos</a></li>
+                        <li><a href="uso-aceptable.html" class="text-white transition">Uso Aceptable</a></li>
+                        <li><a href="reembolsos.html" class="hover:text-white transition">Reembolsos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:row items-center justify-between gap-6 text-sm">
+                <p>© 2026 PymesHUB. Todos los derechos reservados.</p>
+                <div class="flex items-center gap-2">
+                    <div class="ssl-seal mb-2 md:mb-0">
+                        <script type="text/javascript"> //<![CDATA[
+                            var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.trust-provider.com/" : "http://www.trustlogo.com/");
+                            document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
+                        //]]></script>
+                        <script language="JavaScript" type="text/javascript">
+                            TrustLogo("https://www.positivessl.com/images/seals/positivessl_trust_seal_lg_222x54.png", "POSDV", "none");
+                        </script>
+                    </div>
+                    <span>San José, Costa Rica</span>
+                    <span class="text-slate-700">|</span>
+                    <span class="text-indigo-400">Otnel S.A.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>

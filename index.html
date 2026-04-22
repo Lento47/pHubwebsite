@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PymesHub | Moderniza tu Negocio en Costa Rica</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- AOS Animate -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="antialiased bg-grid">
+    <!-- Background Elements -->
+    <div class="blob-container">
+        <div class="blob top-0 -left-64"></div>
+        <div class="blob top-[40%] -right-64" style="animation-delay: -5s;"></div>
+        <div class="blob bottom-0 left-1/2 -translate-x-1/2" style="animation-delay: -10s;"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass border-b border-slate-200/50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white">
+                    <i class="fa-solid fa-layer-group text-lg"></i>
+                </div>
+                <span class="text-2xl font-bold tracking-tight text-slate-900">Pymes<span
+                        class="text-indigo-600">HUB</span></span>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8 font-medium text-slate-600">
+                <a href="#soluciones" class="hover:text-indigo-600 transition">Soluciones</a>
+                <a href="#experiencia" class="hover:text-indigo-600 transition">Experiencia</a>
+                <a href="#modulos" class="hover:text-indigo-600 transition">Módulos</a>
+                
+                <button id="theme-toggle" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-slate-200 transition-colors" title="Cambiar Tema">
+                    <i class="fa-solid fa-palette text-slate-600"></i>
+                </button>
+
+                <a href="#" class="btn-premium text-white px-6 py-2.5 rounded-full shadow-sm">Comenzar Ahora</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-40 pb-20 flex items-center relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8" data-aos="fade-right">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 text-indigo-600 text-sm font-semibold border border-indigo-100/50">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                        </span>
+                        Software #1 para PyMEs en Costa Rica
+                    </div>
+                    <h1 class="text-6xl md:text-7xl font-black text-slate-950 leading-tight">
+                        Transforma tu negocio con <span class="text-indigo-600 text-gradient">tecnología</span> de élite.
+                    </h1>
+                    <p class="text-xl text-slate-600 leading-relaxed max-w-xl">
+                        Gestiona facturación electrónica, flujo de caja y CRM en una sola plataforma diseñada para la realidad Tica.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#" class="btn-premium text-white px-8 py-4 rounded-2xl font-bold text-lg flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cloud-arrow-down"></i> Prueba PymesHUB Gratis
+                        </a>
+                        <a href="#" class="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-2xl font-bold text-lg flex items-center justify-center gap-2 hover:bg-slate-50 transition-colors">
+                            <i class="fa-solid fa-play"></i> Ver Demo Video
+                        </a>
+                    </div>
+                </div>
+                <div class="relative" data-aos="zoom-in">
+                    <div class="absolute -z-10 inset-0 bg-indigo-200 rounded-full blur-[100px] opacity-20"></div>
+                    <img src="assets/dashboard.png" alt="Dashboard" class="rounded-3xl shadow-2xl border border-slate-200/50">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section id="soluciones" class="py-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
+                    <h3 class="text-4xl md:text-5xl font-bold text-slate-950 mb-6">Todo lo que necesitas para escalar</h3>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-3xl border border-slate-200 bg-white card-premium" data-aos="fade-up">
+                        <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-users text-2xl"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4">CRM Estratégico</h4>
+                        <p class="text-slate-600">Centraliza información de clientes y automatiza seguimientos comerciales.</p>
+                    </div>
+                    <div class="p-8 rounded-3xl border border-slate-200 bg-white card-premium" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-file-invoice-dollar text-2xl"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4">Facturación Legal</h4>
+                        <p class="text-slate-600">Emití facturas 100% integradas con el Ministerio de Hacienda.</p>
+                    </div>
+                    <div class="p-8 rounded-3xl border border-slate-200 bg-white card-premium" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-14 h-14 bg-slate-900 text-white rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-chart-line text-2xl"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4">Análisis Real</h4>
+                        <p class="text-slate-600">Reportes inteligentes y previsiones financieras precisas para ganar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capabilities -->
+        <section id="modulos" class="py-24 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-20" data-aos="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-900">Módulos Integrados</h2>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-3xl bg-white border border-slate-200 card-premium" data-aos="fade-up">
+                        <i class="fa-solid fa-envelope-open-text text-3xl text-indigo-600 mb-6 block"></i>
+                        <h4 class="text-xl font-bold mb-3">Inbox Unificado</h4>
+                        <p class="text-slate-600">WhatsApp, Correo y Redes en una sola bandeja colaborativa.</p>
+                    </div>
+                    <div class="p-8 rounded-3xl bg-white border border-slate-200 card-premium" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fa-solid fa-file-invoice text-3xl text-emerald-600 mb-6 block"></i>
+                        <h4 class="text-xl font-bold mb-3">Carga OCR</h4>
+                        <p class="text-slate-600">Extrae datos de facturas físicas con IA en segundos.</p>
+                    </div>
+                    <div class="p-8 rounded-3xl bg-white border border-slate-200 card-premium" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fa-solid fa-wand-magic-sparkles text-3xl text-purple-600 mb-6 block"></i>
+                        <h4 class="text-xl font-bold mb-3">Resúmenes IA</h4>
+                        <p class="text-slate-600">IA que analiza tus ventas e inventarios por vos.</p>
+                    </div>
+                    <div class="p-8 rounded-3xl bg-white border border-slate-200 card-premium" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fa-solid fa-users-gear text-3xl text-blue-600 mb-6 block"></i>
+                        <h4 class="text-xl font-bold mb-3">CRM Experto</h4>
+                        <p class="text-slate-600">Gestiona relaciones y ventas sin perder un solo prospecto.</p>
+                    </div>
+                    <div class="p-8 rounded-3xl bg-white border border-slate-200 card-premium" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fa-solid fa-list-check text-3xl text-amber-600 mb-6 block"></i>
+                        <h4 class="text-xl font-bold mb-3">Tareas</h4>
+                        <p class="text-slate-600">Asigna y vigila el progreso de tu equipo en tiempo real.</p>
+                    </div>
+                    <div class="p-8 rounded-3xl bg-white border border-slate-200 card-premium" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fa-solid fa-diagram-project text-3xl text-rose-600 mb-6 block"></i>
+                        <h4 class="text-xl font-bold mb-3">Flujos</h4>
+                        <p class="text-slate-600">Automatizaciones para ahorrar horas de trabajo operativo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="py-24 bg-indigo-600 text-white text-center relative overflow-hidden shadow-2xl">
+            <div class="max-w-4xl mx-auto px-6 relative z-10" data-aos="zoom-in">
+                <h2 class="text-4xl md:text-6xl font-black mb-8">¿Listo para escalar al siguiente nivel?</h2>
+                <p class="text-xl mb-12 opacity-90 leading-relaxed">Únete a cientos de empresarios que ya están automatizando sus procesos en Costa Rica.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="#" class="bg-white text-[var(--brand-primary)] px-10 py-5 rounded-2xl font-black text-xl shadow-xl hover:scale-105 transition">Descargar Gratis</a>
+                    <a href="https://wa.me/50612345678" class="border-2 border-white/30 px-10 py-5 rounded-2xl font-bold text-xl hover:bg-white/10 transition">Hablar con Ventas</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Full Footer -->
+    <footer class="pt-24 pb-12 text-slate-400 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-16">
+            <div class="md:col-span-2">
+                <div class="flex items-center gap-2 mb-8">
+                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white">
+                        <i class="fa-solid fa-layer-group text-lg"></i>
+                    </div>
+                    <span class="text-3xl font-bold text-white">PymesHUB</span>
+                </div>
+                <p class="text-lg leading-relaxed max-w-sm mb-8">
+                    Empoderando a las PyMEs de Costa Rica con tecnología intuitiva y soporte humano. Liderando la transformación digital empresarial en el país.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-indigo-600 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-indigo-600 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-indigo-600 transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-8 uppercase text-sm tracking-widest">Plataforma</h4>
+                <ul class="space-y-4 font-medium">
+                    <li><a href="#soluciones" class="hover:text-indigo-400 transition-colors">Funcionalidades</a></li>
+                    <li><a href="seguridad.html" class="hover:text-indigo-400 transition-colors">Seguridad</a></li>
+                    <li><a href="#precios" class="hover:text-indigo-400 transition-colors">Planes y Precios</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-8 uppercase text-sm tracking-widest">Legal</h4>
+                <ul class="space-y-4 font-medium">
+                    <li><a href="privacidad.html" class="hover:text-indigo-400 transition-colors">Privacidad</a></li>
+                    <li><a href="terminos.html" class="hover:text-indigo-400 transition-colors">Términos</a></li>
+                    <li><a href="uso-aceptable.html" class="hover:text-indigo-400 transition-colors">Uso Aceptable</a></li>
+                    <li><a href="reembolsos.html" class="hover:text-indigo-400 transition-colors">Reembolsos</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-sm">
+            <p>© 2026 PymesHUB. Todos los derechos reservados.</p>
+            <div class="flex items-center gap-6 mt-4 md:mt-0">
+                <!-- PositiveSSL Seal -->
+                <div class="ssl-seal">
+                    <script type="text/javascript"> //<![CDATA[
+                        var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.trust-provider.com/" : "http://www.trustlogo.com/");
+                        document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
+                    //]]></script>
+                    <script language="JavaScript" type="text/javascript">
+                        TrustLogo("https://www.positivessl.com/images/seals/positivessl_trust_seal_lg_222x54.png", "POSDV", "none");
+                    </script>
+                </div>
+                <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot"></i> San José, Costa Rica</span>
+                <span class="opacity-20 hidden md:block">|</span>
+                <span class="text-indigo-500 font-bold uppercase tracking-tighter">Otnel S.A.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <a href="https://wa.me/50612345678" target="_blank" class="whatsapp-btn flex items-center justify-center">
+        <i class="fa-brands fa-whatsapp text-4xl"></i>
+    </a>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>

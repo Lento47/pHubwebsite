@@ -1,0 +1,221 @@
+:root {
+    --brand-primary: #6366f1;
+    --brand-secondary: #4f46e5;
+    --brand-dark: #020617;
+    --brand-light: #f8fafc;
+    --glass-bg: rgba(255, 255, 255, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --card-bg: #ffffff;
+    --text-muted: #64748b;
+    --grid-color: #f1f5f9;
+}
+
+/* Midnight Theme */
+body.theme-midnight {
+    --brand-primary: #818cf8;
+    --brand-secondary: #6366f1;
+    --brand-dark: #f8fafc;
+    --brand-light: #020617;
+    --glass-bg: rgba(15, 23, 42, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --card-bg: #0f172a;
+    --text-muted: #94a3b8;
+    --grid-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Growth Theme */
+body.theme-growth {
+    --brand-primary: #10b981;
+    --brand-secondary: #059669;
+    --brand-dark: #064e3b;
+    --brand-light: #f0fdf4;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(16, 185, 129, 0.2);
+    --card-bg: #ffffff;
+    --text-muted: #374151;
+    --grid-color: #d1fae5;
+}
+
+/* Core Layout - NO DOUBLE SCROLLBARS */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--brand-light);
+    color: var(--brand-dark);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+main {
+    flex: 1 0 auto; /* This forces the footer to the bottom */
+}
+
+footer {
+    flex-shrink: 0;
+    background-color: #020617 !important;
+}
+
+body.theme-midnight footer { background-color: #010409 !important; }
+body.theme-growth footer { background-color: #064e3b !important; }
+
+/* Background Patterns */
+.bg-grid {
+    position: relative;
+}
+
+.bg-grid::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: 60px 60px;
+    background-image: 
+        linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.blob-container {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.blob {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, rgba(79, 70, 229, 0.05) 100%);
+    filter: blur(120px);
+    border-radius: 50%;
+    animation: move 25s infinite alternate ease-in-out;
+}
+
+@keyframes move {
+    from { transform: translate(-5%, -5%) scale(1); }
+    to { transform: translate(5%, 5%) scale(1.15); }
+}
+
+/* Premium Styles */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+}
+
+.btn-premium {
+    background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-premium:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -10px rgba(79, 70, 229, 0.4);
+}
+
+.card-premium {
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.card-premium:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 40px 80px -20px rgba(15, 23, 42, 0.1);
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Theme Overrides */
+.bg-white, .bg-slate-50, .bg-indigo-50, .bg-slate-100 {
+    background-color: var(--card-bg) !important;
+}
+
+h1, h2, h3, h4, .text-slate-900, .text-slate-950 {
+    color: var(--brand-dark) !important;
+}
+
+.text-slate-600, .text-slate-500 {
+    color: var(--text-muted) !important;
+}
+
+body.theme-midnight .bg-indigo-100, 
+body.theme-midnight .bg-green-100,
+body.theme-midnight .bg-blue-100 {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: var(--brand-primary) !important;
+}
+
+/* Featured CTA Theme Overrides */
+.bg-indigo-600 {
+    background-color: var(--brand-primary) !important;
+}
+
+body.theme-midnight .bg-indigo-600 {
+    background-color: #1a1c2e !important;
+}
+
+/* Legibility fix for tinted sections (avoids black text on dark backgrounds) */
+section.bg-indigo-600 h2,
+section.bg-indigo-600 p,
+section.bg-slate-950 h2,
+section.bg-slate-950 p {
+    color: white !important;
+}
+
+/* WhatsApp */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25d366;
+    color: white;
+    padding: 16px;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+    z-index: 100;
+}
+
+/* General Transition */
+* {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* SSL Seal Scaling */
+.ssl-seal {
+    transform: scale(0.65);
+    transform-origin: center;
+    display: inline-block;
+    vertical-align: middle;
+    filter: grayscale(0.2) contrast(1.1); /* Subtle premium look */
+    transition: all 0.3s ease;
+}
+
+.ssl-seal:hover {
+    transform: scale(0.7);
+    filter: grayscale(0) contrast(1.2);
+}
+
+@media (max-width: 768px) {
+    .ssl-seal {
+        transform: scale(0.55);
+    }
+}
