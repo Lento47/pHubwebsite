@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte y Documentación | PymeHub</title>
+    <!-- Google Fonts: Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    <style>
+        .doc-sidebar-active {
+            background: rgba(59, 130, 246, 0.1);
+            color: #60a5fa;
+            border-left: 3px solid #3b82f6;
+        }
+        .prose h2 { color: white; font-weight: 800; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.875rem; }
+        .prose h3 { color: #60a5fa; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; font-size: 1.25rem; }
+        .prose p { margin-bottom: 1rem; line-height: 1.8; color: #94a3b8; }
+        .prose ul { list-style: disc; margin-left: 1.5rem; margin-bottom: 1.5rem; color: #94a3b8; }
+        .prose code { background: rgba(255,255,255,0.05); padding: 0.2rem 0.4rem; border-radius: 4px; color: #f8fafc; font-family: monospace; }
+    </style>
+</head>
+
+<body class="antialiased overflow-x-hidden text-slate-300">
+    <!-- UI Background -->
+    <div class="bg-glow"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="assets/logo.svg" alt="PymeHub Logo" class="w-8 h-8">
+                <span class="text-lg font-bold tracking-tighter text-white">PymeHub <span class="text-blue-500">Docs</span></span>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="relative hidden md:block">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-sm"></i>
+                    <input type="text" placeholder="Buscar en la documentación..." class="bg-white/5 border border-white/10 rounded-lg pl-10 pr-4 py-1.5 text-sm w-64 focus:outline-none focus:border-blue-500 transition">
+                </div>
+                <a href="index.html" class="text-xs font-bold text-slate-400 hover:text-white transition">Ir a la Web</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex max-w-7xl mx-auto px-6 pt-24 min-h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 fixed h-[calc(100vh-6rem)] overflow-y-auto hidden lg:block pr-8 border-r border-white/5">
+            <div class="space-y-8">
+                <div>
+                    <h5 class="text-[10px] uppercase tracking-widest font-black text-slate-500 mb-4">Aprendizaje</h5>
+                    <nav class="space-y-1">
+                        <a href="#introduccion" class="block py-2 px-3 text-sm rounded-lg doc-sidebar-active">Introducción</a>
+                        <a href="#quickstart" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Inicio Rápido</a>
+                        <a href="#planes" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Planes y Límites</a>
+                    </nav>
+                </div>
+                <div>
+                    <h5 class="text-[10px] uppercase tracking-widest font-black text-slate-500 mb-4">Módulos Core</h5>
+                    <nav class="space-y-1">
+                        <a href="#" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Inbox Unificado</a>
+                        <a href="#" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Facturación Electrónica</a>
+                        <a href="#" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">CRM y Kanban</a>
+                        <a href="#" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Automatizaciones</a>
+                    </nav>
+                </div>
+                <div>
+                    <h5 class="text-[10px] uppercase tracking-widest font-black text-slate-500 mb-4">Desarrolladores</h5>
+                    <nav class="space-y-1">
+                        <a href="#" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Referencia API</a>
+                        <a href="#" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Webhooks</a>
+                    </nav>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-grow lg:ml-72 pb-20">
+            <div class="prose prose-invert max-w-none">
+                <section id="introduccion">
+                    <div class="flex items-center gap-2 text-blue-500 text-sm font-bold mb-4">
+                        <i class="fa-solid fa-book-open"></i> GUÍA DE BIENVENIDA
+                    </div>
+                    <h1 class="text-5xl font-black text-white mb-6">Introducción a PymeHub</h1>
+                    <p class="text-xl text-slate-400 leading-relaxed">
+                        Bienvenido a PymeHub, el socio inteligente diseñado para centralizar la operación completa de tu PyME en una sola herramienta.
+                    </p>
+                    
+                    <div class="card-premium p-6 my-10 bg-blue-600/5 border-blue-500/20">
+                        <h4 class="text-white font-bold mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-lightbulb text-yellow-500"></i> Propuesta de Valor
+                        </h4>
+                        <p class="text-sm m-0 italic">"Tu socio inteligente que te dice exactamente qué ajustar en tu negocio, basado en datos."</p>
+                    </div>
+
+                    <h2>¿Qué es PymeHub?</h2>
+                    <p>
+                        PymeHub es una plataforma SaaS B2B **multi-tenant** desarrollada específicamente para el mercado hispanohablante, con especial enfoque en las necesidades operativas de Costa Rica. Centralizamos lo que normalmente requeriría 5 o 6 herramientas distintas (Slack, HubSpot, Trello, Excel) en un único ecosistema fluido.
+                    </p>
+
+                    <h3>Funcionalidades de Élite</h3>
+                    <ul>
+                        <li><strong>Inbox unificado:</strong> Gestiona Email y WhatsApp en una sola vista.</li>
+                        <li><strong>CRM Inteligente:</strong> Control total de clientes, proveedores y leads.</li>
+                        <li><strong>Insights IA:</strong> Análisis predictivo mes a mes en español.</li>
+                        <li><strong>Facturación Hacienda:</strong> Integración nativa para facturación electrónica en CR.</li>
+                        <li><strong>Automatizaciones:</strong> Reglas sin código para ahorrar horas de trabajo.</li>
+                    </ul>
+
+                    <h2 id="quickstart">Inicio Rápido (3 pasos)</h2>
+                    <p>Para empezar a ver resultados hoy mismo, sigue estos pasos:</p>
+                    <div class="space-y-4 my-8">
+                        <div class="flex gap-4 items-start p-4 bg-white/2 rounded-xl border border-white/5">
+                            <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center shrink-0 text-white font-black">1</div>
+                            <div>
+                                <h4 class="text-white font-bold">Descarga la App Nativa</h4>
+                                <p class="text-sm">PymeHub corre sobre Tauri 2 para ofrecerte una experiencia Windows ultrarrápida. <a href="https://downloads.pymeshub.lat/Pymeshub%20Cloud_0.1.0_x64-setup.exe" class="text-blue-400 underline">Descargar aquí</a>.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start p-4 bg-white/2 rounded-xl border border-white/5">
+                            <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center shrink-0 text-white font-black">2</div>
+                            <div>
+                                <h4 class="text-white font-bold">Vincula tus canales</h4>
+                                <p class="text-sm">Conecta tu cuenta de Gmail y escanea el código QR de WhatsApp en el módulo de Inbox.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start p-4 bg-white/2 rounded-xl border border-white/5">
+                            <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center shrink-0 text-white font-black">3</div>
+                            <div>
+                                <h4 class="text-white font-bold">Configura Hacienda</h4>
+                                <p class="text-sm">Sube tu llave criptográfica y credenciales de ATV para habilitar la facturación electrónica automática.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 id="planes">Planes y Límites</h2>
+                    <p>PymeHub escala según el crecimiento de tu negocio:</p>
+                    <div class="overflow-x-auto my-8">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="border-b border-white/10">
+                                    <th class="py-4 text-white font-bold">Plan</th>
+                                    <th class="py-4 text-white font-bold">Usuarios</th>
+                                    <th class="py-4 text-white font-bold">Almacenamiento</th>
+                                    <th class="py-4 text-white font-bold">Canales</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm text-slate-400">
+                                <tr class="border-b border-white/5">
+                                    <td class="py-4 text-blue-400 font-bold">Free</td>
+                                    <td class="py-4">3</td>
+                                    <td class="py-4">100 MB</td>
+                                    <td class="py-4">2</td>
+                                </tr>
+                                <tr class="border-b border-white/5">
+                                    <td class="py-4 text-white font-bold">Starter</td>
+                                    <td class="py-4">10</td>
+                                    <td class="py-4">5 GB</td>
+                                    <td class="py-4">5</td>
+                                </tr>
+                                <tr class="border-b border-white/5">
+                                    <td class="py-4 text-white font-bold">Growth</td>
+                                    <td class="py-4">25</td>
+                                    <td class="py-4">50 GB</td>
+                                    <td class="py-4">10</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4 text-blue-500 font-bold">Enterprise</td>
+                                    <td class="py-4 font-bold">Ilimitado</td>
+                                    <td class="py-4 font-bold">Ilimitado</td>
+                                    <td class="py-4 font-bold">Ilimitado</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Docs Footer -->
+            <div class="mt-20 pt-10 border-t border-white/5 flex justify-between items-center text-xs text-slate-600">
+                <p>© 2026 Otnel S.A. | San José, Costa Rica</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-blue-500 transition">Twitter</a>
+                    <a href="#" class="hover:text-blue-500 transition">GitHub</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
