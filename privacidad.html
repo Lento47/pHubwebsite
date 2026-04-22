@@ -4,154 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacidad | PymesHub</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&display=swap"
-        rel="stylesheet">
+    <title>Política de Privacidad | PymeHub Legal</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
 </head>
 
-<body class="antialiased bg-grid">
-    <nav class="fixed w-full z-50 glass border-b border-slate-200/50">
+<body class="antialiased overflow-x-hidden text-slate-300">
+    <!-- UI Background -->
+    <div class="bg-glow"></div>
+    <div class="bg-pattern"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2">
-                <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white">
-                    <i class="fa-solid fa-layer-group text-lg"></i>
-                </div>
-                <span class="text-2xl font-bold tracking-tight text-slate-900">PymesHUB</span>
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="assets/logo.svg" alt="PymeHub Logo" class="w-8 h-8 drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]">
+                <span class="text-xl font-bold tracking-tighter text-white">Pyme<span class="text-blue-500">Hub</span></span>
             </a>
-            <button id="theme-toggle" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center"><i
-                    class="fa-solid fa-palette text-slate-600"></i></button>
+            <a href="index.html" class="text-sm font-bold text-slate-400 hover:text-white transition flex items-center gap-2">
+                <i class="fa-solid fa-arrow-left"></i> Volver al inicio
+            </a>
         </div>
     </nav>
-    <main class="flex-grow pt-40 pb-20">
-        <div class="max-w-4xl mx-auto px-6 bg-white p-12 rounded-3xl border border-slate-200 shadow-sm content-section">
-            <h1 class="text-4xl font-black mb-8 text-[var(--brand-primary)]">Política de Privacidad</h1>
-            <p class="text-slate-500 mb-8 italic">Última actualización: 21 de abril de 2024</p>
-            
-            <div class="prose prose-slate max-w-none text-slate-600 space-y-10">
-                <section>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Propósito</h2>
-                    <p>Esta Política de Privacidad describe cómo <strong>Otnel S.A.</strong> recopila, usa, comparte, conserva y protege datos personales en relación con PymesHub. Su objetivo es informar de manera transparente el tratamiento de datos que se produce al navegar por <strong>pymeshub.lat</strong>, solicitar información comercial, contratar el servicio o utilizar sus funcionalidades.</p>
+
+    <main class="pt-40 pb-32">
+        <div class="max-w-4xl mx-auto px-6">
+            <header class="mb-20 space-y-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-widest border border-blue-500/20">
+                    Centro Legal de PymeHub
+                </div>
+                <h1 class="text-5xl font-black text-white">Política de Privacidad</h1>
+                <p class="text-slate-500">Conforme a la Ley 8968 (Costa Rica) | Última actualización: 22 de abril, 2026</p>
+            </header>
+
+            <div class="space-y-12">
+                <section class="card-premium p-8 bg-white/2 border border-white/5">
+                    <h3 class="text-xl font-bold text-white mb-4">1. Recopilación de Datos</h3>
+                    <p class="leading-relaxed">
+                        Recopilamos información necesaria para la operación de su cuenta, tales como nombre comercial, identificación tributaria y datos de contacto. Los datos operativos (ventas, clientes) son de propiedad exclusiva de su empresa.
+                    </p>
                 </section>
 
-                <section>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Alcance</h2>
-                    <p>Esta política aplica a:</p>
-                    <ul class="list-disc pl-6 mt-4 space-y-2">
-                        <li>El sitio web y formularios de contacto o demo.</li>
-                        <li>El registro y administración de cuentas y workspaces.</li>
-                        <li>El uso del inbox unificado, CRM, tareas, documentos, OCR, automatizaciones, insights, resúmenes IA, dashboards y soporte.</li>
-                        <li>Los tratamientos efectuados por <strong>Otnel S.A.</strong> como responsable o encargado, según corresponda al contexto.</li>
-                    </ul>
+                <section class="card-premium p-8 bg-white/2 border border-white/5">
+                    <h3 class="text-xl font-bold text-white mb-4">2. Uso de la Información</h3>
+                    <p class="leading-relaxed">
+                        Utilizamos su información únicamente para proveer el servicio, mejorar las funcionalidades y cumplir con obligaciones tributarias ante el Ministerio de Hacienda. Jamás vendemos sus datos a terceros.
+                    </p>
                 </section>
 
-                <section>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">3. Definiciones Clave</h2>
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 grid md:grid-cols-2 gap-4 text-sm">
-                        <div><strong>Datos personales:</strong> Información relativa a una persona identificada o identificable.</div>
-                        <div><strong>Responsable:</strong> Quien decide los fines y medios del tratamiento.</div>
-                        <div><strong>Encargado:</strong> Quien trata datos por cuenta del responsable.</div>
-                        <div><strong>Titular:</strong> Persona física a la que pertenecen los datos.</div>
-                        <div><strong>Cliente:</strong> Empresa o persona que contrata PymesHub.</div>
-                        <div><strong>Subprocesador:</strong> Tercero que trata datos por cuenta de Otnel S.A.</div>
-                    </div>
+                <section class="card-premium p-8 bg-white/2 border border-white/5">
+                    <h3 class="text-xl font-bold text-white mb-4">3. Seguridad de los Datos</h3>
+                    <p class="leading-relaxed">
+                        Implementamos cifrado de grado bancario (SSL/TLS) y almacenamiento seguro en servidores distribuidos. Toda la información financiera se maneja bajo protocolos de máxima confidencialidad.
+                    </p>
                 </section>
 
-                <section>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">4. Identidad y Rol de Tratamiento</h2>
-                    <p><strong>Otnel S.A.</strong>, con domicilio en <strong>San José, Costa Rica</strong>, actúa como responsable respecto a datos de navegación y administración, y como encargado respecto a los datos operativos que el cliente gestiona dentro de la plataforma.</p>
-                    <p class="mt-4">El canal oficial para privacidad es: <a href="mailto:info@pymeshub.lat" class="text-indigo-600 font-bold">info@pymeshub.lat</a>.</p>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">5. Categorías de Datos Tratados</h2>
-                    <p>Podemos tratar datos de identificación, autenticación, configuración del workspace, archivos cargados (OCR), prompts de IA y datos de facturación, siempre bajo los protocolos de seguridad más estrictos.</p>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">6. Finalidades del Tratamiento</h2>
-                    <p>Los datos se tratan para operar el servicio, extraer texto mediante OCR, generar asistencias basadas en IA, emitir facturas legales ante el Ministerio de Hacienda y asegurar la continuidad del negocio.</p>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">7. Base del Tratamiento</h2>
-                    <p>Nos basamos en la ejecución contractual, cumplimiento de obligaciones legales (Ley N° 8968 de Costa Rica) e interés legítimo en la seguridad del servicio.</p>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">8. Destinatarios y Transferencia Internacional</h2>
-                    <p>Otnel S.A. puede compartir datos con proveedores de infraestructura (hosting, IA, pagos) necesarios para el servicio, los cuales pueden operar en Estados Unidos u otras regiones fuera de Costa Rica. La lista detallada de subprocesadores está disponible bajo solicitud para clientes corporativos.</p>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">9. Seguridad</h2>
-                    <p>Aplicamos controles de segregación multi-tenant, cifrado en tránsito (SSL/TLS) y en reposo, backups continuos y gestión proactiva de incidentes.</p>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">10. Sus Derechos</h2>
-                    <p>Para ejercer sus derechos de acceso, rectificación o supresión, contáctenos en <span class="font-bold">info@pymeshub.lat</span>. Al actuar como encargados, remitiremos las solicitudes de terceros al cliente responsable correspondiente.</p>
-                </section>
-            </div>
-            
-            <div class="mt-12 p-8 bg-indigo-50 rounded-3xl border border-indigo-100">
-                <p class="text-indigo-900 font-bold mb-2 text-lg">¿Preguntas adicionales?</p>
-                <p class="text-indigo-700">Esta política es parte integral de nuestros <a href="terminos.html" class="underline hover:text-indigo-900">Términos y Condiciones</a>. Estamos comprometidos con la transparencia total en el manejo de su información.</p>
+                <div class="pt-8 border-t border-white/5">
+                    <p class="text-sm text-slate-500">Puede ejercer sus derechos de ARCO contactando a nuestro Oficial de Privacidad en <a href="mailto:info@pymeshub.lat" class="text-blue-500">info@pymeshub.lat</a></p>
+                </div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-slate-950 pt-20 pb-10 text-slate-400">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-                <div class="col-span-2">
-                    <div class="flex items-center gap-2 mb-6">
-                        <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white">
-                            <i class="fa-solid fa-layer-group text-lg"></i>
-                        </div>
-                        <span class="text-2xl font-bold tracking-tight text-white">PymesHUB</span>
-                    </div>
-                    <p class="text-lg max-w-sm">Empoderando a las PyMEs de Costa Rica con tecnología intuitiva y soporte humano. Liderando la transformación digital empresarial en el país.</p>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-6">Plataforma</h4>
-                    <ul class="space-y-4">
-                        <li><a href="index.html#features" class="hover:text-white transition">Funcionalidades</a></li>
-                        <li><a href="seguridad.html" class="hover:text-white transition">Seguridad</a></li>
-                        <li><a href="index.html#pricing" class="hover:text-white transition">Planes y Precios</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-6">Legal</h4>
-                    <ul class="space-y-4">
-                        <li><a href="privacidad.html" class="text-white transition">Privacidad</a></li>
-                        <li><a href="terminos.html" class="hover:text-white transition">Términos</a></li>
-                        <li><a href="uso-aceptable.html" class="hover:text-white transition">Uso Aceptable</a></li>
-                        <li><a href="reembolsos.html" class="hover:text-white transition">Reembolsos</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="pt-8 border-t border-slate-800 flex flex-col md:row items-center justify-between gap-6 text-sm">
-                <p>© 2026 PymesHUB. Todos los derechos reservados.</p>
-                <div class="flex items-center gap-2">
-                    <div class="ssl-seal mb-2 md:mb-0">
-                        <script type="text/javascript"> //<![CDATA[
-                            var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.trust-provider.com/" : "http://www.trustlogo.com/");
-                            document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
-                        //]]></script>
-                        <script language="JavaScript" type="text/javascript">
-                            TrustLogo("https://www.positivessl.com/images/seals/positivessl_trust_seal_lg_222x54.png", "POSDV", "none");
-                        </script>
-                    </div>
-                    <span>San José, Costa Rica</span>
-                    <span class="text-slate-700">|</span>
-                    <span class="text-indigo-400">Otnel S.A.</span>
-                </div>
-            </div>
-        </div>
-    <script src="assets/js/scripts.js"></script>
+    <!-- Simple Footer -->
+    <footer class="py-12 border-t border-white/5 text-center text-xs text-slate-600">
+        <p>© 2026 Otnel S.A. San José, Costa Rica.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

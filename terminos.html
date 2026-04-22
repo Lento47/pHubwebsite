@@ -1,304 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal | PymesHub</title>
+    <title>Términos de Servicio | PymeHub Legal</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
 </head>
-<body class="antialiased bg-grid">
-    <nav class="fixed w-full z-50 glass border-b border-slate-200/50">
+
+<body class="antialiased overflow-x-hidden text-slate-300">
+    <!-- UI Background -->
+    <div class="bg-glow"></div>
+    <div class="bg-pattern"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3">
-                <img src="assets/logo.svg" alt="PymeHub Logo" class="w-10 h-10">
-                <span class="text-2xl font-bold tracking-tighter text-slate-900">PymeHub</span>
+                <img src="assets/logo.svg" alt="PymeHub Logo" class="w-8 h-8 drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]">
+                <span class="text-xl font-bold tracking-tighter text-white">Pyme<span class="text-blue-500">Hub</span></span>
             </a>
-            <button id="theme-toggle" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center"><i class="fa-solid fa-palette text-slate-600"></i></button>
+            <a href="index.html" class="text-sm font-bold text-slate-400 hover:text-white transition flex items-center gap-2">
+                <i class="fa-solid fa-arrow-left"></i> Volver al inicio
+            </a>
         </div>
     </nav>
-    <main class="flex-grow pt-40 pb-20">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h1 class="text-5xl font-black mb-6 text-[var(--brand-primary)]">Términos Generales de Servicio</h1>
-                <p class="text-xl text-slate-500 italic">Versión 2024.1 | Última modificación: 21 de abril de 2024</p>
-            </div>
 
-            <div class="grid lg:grid-cols-4 gap-12">
-                <!-- Navigation Sidebar -->
-                <aside class="lg:col-span-1 border-r border-slate-200 hidden lg:block pr-8 top-32 sticky h-fit">
-                    <h4 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6">Contenido</h4>
-                    <nav class="space-y-4 text-sm font-medium">
-                        <a href="#section-1" class="block hover:text-indigo-600 transition">1. Derechos de Uso</a>
-                        <a href="#section-5" class="block hover:text-indigo-600 transition">5. Protección de Datos</a>
-                        <a href="#section-6" class="block hover:text-indigo-600 transition">6. Seguridad</a>
-                        <a href="#section-15" class="block hover:text-indigo-600 transition">15. Confidencialidad</a>
-                        <a href="#section-20" class="block hover:text-indigo-600 transition">20. Resp. Limitada</a>
-                        <a href="#section-23" class="block hover:text-indigo-600 transition">23. Ley Aplicable</a>
-                    </nav>
-                </aside>
-
-                <!-- Terms Content -->
-                <div class="lg:col-span-3 space-y-16 pb-20">
-                    <section id="section-1">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">01</span>
-                            Derechos de Uso y Límites
-                        </h2>
-                        <div class="prose prose-slate text-slate-600">
-                            <p>Otnel S.A. otorga al Cliente un derecho limitado, no exclusivo e intransferible para acceder y utilizar PymeHub según el plan suscrito. El Cliente es responsable de asegurar que el uso no exceda las capacidades contratadas.</p>
-                        </div>
-                    </section>
-
-                    <div class="grid md:grid-cols-2 gap-12">
-                        <section id="section-2">
-                            <h3 class="text-lg font-bold text-slate-900 mb-4">2. Fuentes Aprobadas</h3>
-                            <p class="text-slate-600 text-sm">Estos términos aplican a compras directas o mediante socios comerciales autorizados por Otnel S.A.</p>
-                        </section>
-                        <section id="section-3">
-                            <h3 class="text-lg font-bold text-slate-900 mb-4">3. Proveedores Terceros</h3>
-                            <p class="text-slate-600 text-sm">El Cliente es responsable de cumplir con las políticas de integraciones externas (ej. APIs de terceros).</p>
-                        </section>
-                    </div>
-
-                    <section id="section-5">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">05</span>
-                            Protección de Datos
-                        </h2>
-                        <p class="text-slate-600">Tratamos los datos según nuestra <a href="privacidad.html" class="text-indigo-600 underline font-bold">Política de Privacidad</a>, cumpliendo estrictamente con la Ley 8968 de Costa Rica y estándares internacionales.</p>
-                    </section>
-
-                    <section id="section-6">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">06</span>
-                            Seguridad y Resiliencia
-                        </h2>
-                        <p class="text-slate-600">Aplicamos protocolos de seguridad avanzada (AES-256) y planes de continuidad de negocio para asegurar que su operación nunca se detenga.</p>
-                    </section>
-
-                    <section id="section-7">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">07</span>
-                            Soporte y Mantenimiento
-                        </h2>
-                        <p class="text-slate-600">Otnel S.A. proporciona soporte técnico según el plan contratado. El mantenimiento del sistema se realiza procurando el mínimo impacto en la disponibilidad del servicio.</p>
-                    </section>
-
-                    <section id="section-8">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">08</span>
-                            Servicios de Implementación
-                        </h2>
-                        <p class="text-slate-600">Cualquier servicio de configuración o personalización adicional se regirá por una Orden de Servicio específica que complementa estos Términos.</p>
-                    </section>
-
-                    <section id="section-9">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">09</span>
-                            Ética y Responsabilidad
-                        </h2>
-                        <p class="text-slate-600">Operamos bajo políticas estrictas de anticorrupción, ética empresarial y responsabilidad social corporativa en todas nuestras operaciones.</p>
-                    </section>
-
-                    <section id="section-10">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">10</span>
-                            Datos de Uso
-                        </h2>
-                        <p class="text-slate-600">Recopilamos datos técnicos y estadísticos de uso de forma agregada para optimizar el rendimiento y la seguridad del sistema.</p>
-                    </section>
-
-                    <section id="section-11">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">11</span>
-                            Verificación de Uso
-                        </h2>
-                        <p class="text-slate-600">Otnel S.A. se reserva el derecho de verificar que el uso de la plataforma se ajuste a los límites de capacidad contratados por el Cliente.</p>
-                    </section>
-
-                    <section id="section-12">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">12</span>
-                            Código Abierto
-                        </h2>
-                        <p class="text-slate-600">El Cliente reconoce y acepta el uso de componentes open source dentro de PymeHub, sujetos a sus respectivas licencias detalladas en nuestra documentación técnica.</p>
-                    </section>
-
-                    <section id="section-13">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">13</span>
-                            Productos de Terceros
-                        </h2>
-                        <p class="text-slate-600">El acceso a extensiones o integraciones de terceros se proporciona "tal cual", bajo los términos y condiciones de sus respectivos proveedores.</p>
-                    </section>
-
-                    <section id="section-14">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">14</span>
-                            Cumplimiento del Cliente
-                        </h2>
-                        <p class="text-slate-600">El Cliente garantiza que su contenido y el uso de la plataforma cumplen con todas las normativas legales vigentes.</p>
-                    </section>
-
-                    <section id="section-15">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">15</span>
-                            Confidencialidad
-                        </h2>
-                        <p class="text-slate-600 underline decoration-indigo-200">Ambas partes se obligan a proteger la información confidencial de la otra parte con el mismo grado de cuidado que protegen la propia.</p>
-                    </section>
-
-                    <section id="section-16">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">16</span>
-                            Pago y Facturación
-                        </h2>
-                        <p class="text-slate-600">Los servicios se facturan electrónicamente según la normativa de Costa Rica. El impago faculta la suspensión temporal del acceso tras previo aviso.</p>
-                    </section>
-
-                    <section id="section-17">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">17</span>
-                            Garantías
-                        </h2>
-                        <p class="text-slate-600">Garantizamos que PymeHub funcionará sustancialmente según la documentación técnica. El servicio se presta en la modalidad "tal cual".</p>
-                    </section>
-
-                    <section id="section-18">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">18</span>
-                            Propiedad Intelectual
-                        </h2>
-                        <p class="text-slate-600">Otnel S.A. conserva todos los derechos sobre el software. El Cliente conserva la titularidad total sobre sus datos cargados.</p>
-                    </section>
-
-                    <section id="section-19">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">19</span>
-                            Vigencia y Terminación
-                        </h2>
-                        <p class="text-slate-600">El contrato tiene la vigencia del plan suscrito. Cualquiera de las partes puede terminarlo por incumplimiento material no subsanado.</p>
-                    </section>
-
-                    <section id="section-20">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">20</span>
-                            Limitación de Responsabilidad
-                        </h2>
-                        <p class="text-slate-600">Nuestra responsabilidad agregada se limita al monto total pagado por el Cliente en los 12 meses anteriores al evento generador del reclamo.</p>
-                    </section>
-
-                    <section id="section-21">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">21</span>
-                            Indemnidad
-                        </h2>
-                        <p class="text-slate-600">El Cliente defenderá a Otnel S.A. frente a reclamaciones derivadas del contenido del Cliente que infrinja derechos de terceros.</p>
-                    </section>
-
-                    <section id="section-22">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">22</span>
-                            Actualizaciones
-                        </h2>
-                        <p class="text-slate-600">Nos reservamos el derecho de actualizar el servicio y estos Términos anualmente o según sea necesario por cambios legales.</p>
-                    </section>
-
-                    <section id="section-23">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">23</span>
-                            Ley Aplicable
-                        </h2>
-                        <p class="text-slate-600 underline">Este contrato se rige por las leyes de la República de Costa Rica. Toda disputa se someterá a los tribunales de San José.</p>
-                    </section>
-
-                    <section id="section-24">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">24</span>
-                            Nombre del Cliente
-                        </h2>
-                        <p class="text-slate-600">Autoriza el uso de su nombre comercial en nuestra lista de clientes de marketing, salvo notificación expresa en contrario.</p>
-                    </section>
-
-                    <section id="section-25">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">25</span>
-                            Misceláneos
-                        </h2>
-                        <p class="text-slate-600">Si alguna parte de este contrato es inválida, las demás permanecerán vigentes.</p>
-                    </section>
-
-                    <section id="section-26">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">26</span>
-                            Definiciones
-                        </h2>
-                        <p class="text-slate-600 text-sm">Contiene el glosario técnico y legal aplicable a la plataforma (SaaS, Tenant, ARCO, etc.).</p>
-                    </section>
+    <main class="pt-40 pb-32">
+        <div class="max-w-4xl mx-auto px-6">
+            <header class="mb-20 space-y-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-widest border border-blue-500/20">
+                    Centro Legal de PymeHub
                 </div>
-            </div>
-            
-            <div class="mt-12 p-8 bg-indigo-600 rounded-[3rem] text-white text-center">
-                <h4 class="text-2xl font-black mb-4">¿Necesita el documento completo?</h4>
-                <p class="mb-8 opacity-90">Para clientes corporativos, disponemos de la versión extendida en PDF incluyendo los 26 apartados detallados.</p>
-                <a href="mailto:info@pymeshub.lat" class="inline-block bg-white text-indigo-600 px-8 py-4 rounded-2xl font-bold hover:scale-105 transition">Solicitar Master Agreement</a>
+                <h1 class="text-5xl font-black text-white">Términos Generales de Servicio</h1>
+                <p class="text-slate-500">Última actualización: 22 de abril, 2026 | Versión 2.1</p>
+            </header>
+
+            <div class="space-y-12">
+                <section class="card-premium p-8 bg-white/2 border border-white/5">
+                    <h3 class="text-xl font-bold text-white mb-4">1. Derechos de Uso y Límites</h3>
+                    <p class="leading-relaxed">
+                        PymeHub otorga al Cliente un derecho limitado, no exclusivo e intransferible para acceder y utilizar el Servicio según el plan suscrito. El Cliente es responsable de asegurar que el uso no exceda las capacidades contratadas (usuarios, almacenamiento, etc.).
+                    </p>
+                </section>
+
+                <section class="card-premium p-8 bg-white/2 border border-white/5">
+                    <h3 class="text-xl font-bold text-white mb-4">2. Cumplimiento y Ética</h3>
+                    <p class="leading-relaxed">
+                        Operamos bajo estrictos estándares de ética profesional en Costa Rica. PymeHub garantiza que el software cumple con las normativas locales de facturación electrónica emitidas por el Ministerio de Hacienda.
+                    </p>
+                </section>
+
+                <section class="card-premium p-8 bg-white/2 border border-white/5">
+                    <h3 class="text-xl font-bold text-white mb-4">3. Suspensión y Terminación</h3>
+                    <p class="leading-relaxed">
+                        Otnel S.A. se reserva el derecho de suspender el acceso si se detecta uso indebido, falta de pago o actividades que comprometan la seguridad de la infraestructura global.
+                    </p>
+                </section>
+
+                <section class="card-premium p-8 bg-white/2 border border-white/5">
+                    <h3 class="text-xl font-bold text-white mb-4">4. Propiedad Intelectual</h3>
+                    <p class="leading-relaxed">
+                        Toda la tecnología, marcas y diseños asociados a PymeHub son propiedad exclusiva de Otnel S.A. No se permite la ingeniería inversa o redistribución parcial del software.
+                    </p>
+                </section>
+
+                <div class="pt-8 border-t border-white/5">
+                    <p class="text-sm text-slate-500">Para dudas sobre estos términos, contáctenos en <a href="mailto:info@pymeshub.lat" class="text-blue-500">info@pymeshub.lat</a></p>
+                </div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-slate-950 pt-20 pb-10 text-slate-400">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-                <div class="col-span-2">
-                    <div class="flex items-center gap-2 mb-6">
-                        <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white">
-                            <i class="fa-solid fa-layer-group text-lg"></i>
-                        </div>
-                        <span class="text-2xl font-bold tracking-tight text-white">PymesHUB</span>
-                    </div>
-                    <p class="text-lg max-w-sm">Empoderando a las PyMEs de Costa Rica con tecnología intuitiva y soporte humano. Liderando la transformación digital empresarial en el país.</p>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-6">Plataforma</h4>
-                    <ul class="space-y-4">
-                        <li><a href="index.html#features" class="hover:text-white transition">Funcionalidades</a></li>
-                        <li><a href="seguridad.html" class="hover:text-white transition">Seguridad</a></li>
-                        <li><a href="index.html#pricing" class="hover:text-white transition">Planes y Precios</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-6">Legal</h4>
-                    <ul class="space-y-4">
-                        <li><a href="privacidad.html" class="hover:text-white transition">Privacidad</a></li>
-                        <li><a href="terminos.html" class="text-white transition">Términos</a></li>
-                        <li><a href="uso-aceptable.html" class="hover:text-white transition">Uso Aceptable</a></li>
-                        <li><a href="reembolsos.html" class="hover:text-white transition">Reembolsos</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="pt-8 border-t border-slate-800 flex flex-col md:row items-center justify-between gap-6 text-sm">
-                <p>© 2026 PymesHUB. Todos los derechos reservados.</p>
-                <div class="flex items-center gap-2">
-                    <div class="ssl-seal mb-2 md:mb-0">
-                        <script type="text/javascript"> //<![CDATA[
-                            var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.trust-provider.com/" : "http://www.trustlogo.com/");
-                            document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
-                        //]]></script>
-                        <script language="JavaScript" type="text/javascript">
-                            TrustLogo("https://www.positivessl.com/images/seals/positivessl_trust_seal_lg_222x54.png", "POSDV", "none");
-                        </script>
-                    </div>
-                    <span>San José, Costa Rica</span>
-                    <span class="text-slate-700">|</span>
-                    <span class="text-indigo-400">Otnel S.A.</span>
-                </div>
-            </div>
-        </div>
+    <!-- Simple Footer -->
+    <footer class="py-12 border-t border-white/5 text-center text-xs text-slate-600">
+        <p>© 2026 Otnel S.A. San José, Costa Rica.</p>
     </footer>
-    <script src="assets/js/scripts.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
