@@ -64,8 +64,12 @@
                     <h5 class="text-[10px] uppercase tracking-widest font-black text-slate-500 mb-4">Módulos Core</h5>
                     <nav class="space-y-1">
                         <a href="#inbox" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Inbox & FAQ</a>
+                        <a href="#canal-email" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Canal de Email</a>
+                        <a href="#canal-whatsapp" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Canal de WhatsApp</a>
+                        <a href="#automatizaciones" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Automatizaciones</a>
+                        <a href="#crm" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">CRM de Contactos</a>
+                        <a href="#documentos-ocr" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Documentos y OCR</a>
                         <a href="#endpoint-billing" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Facturación Electrónica</a>
-                        <a href="#endpoint-contacts" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">CRM y Kanban</a>
                     </nav>
                 </div>
                 <div>
@@ -418,23 +422,59 @@
                         </div>
                     </div>
 
-                    <!-- Tareas -->
-                    <div id="endpoint-tasks" class="mb-20 space-y-8">
+                    <!-- Sección: Canal de Email -->
+                    <div id="canal-email" class="scroll-mt-32 mb-20 space-y-8">
                         <h2 class="text-3xl font-bold flex items-center gap-3">
-                             <i class="fa-solid fa-list-check text-blue-500"></i> Tareas
+                             <i class="fa-solid fa-envelope text-blue-500"></i> Canal de Email
                         </h2>
-                        <div class="space-y-6">
-                            <div class="bg-white/2 p-6 rounded-2xl border border-white/5">
-                                <span class="bg-blue-600/20 text-blue-500 px-2 py-0.5 rounded text-[10px] font-black uppercase mb-2 inline-block">GET</span>
-                                <code class="text-white block mb-2">/api/tasks?status=TODO</code>
-                                <p class="text-sm text-slate-400">Listado de tareas con filtros de estado.</p>
-                            </div>
-                            <div class="bg-white/2 p-6 rounded-2xl border border-white/5">
-                                <span class="bg-green-600/20 text-green-500 px-2 py-0.5 rounded text-[10px] font-black uppercase mb-2 inline-block">POST</span>
-                                <code class="text-white block mb-2">/api/tasks/{id}/complete</code>
-                                <p class="text-sm text-slate-400">Marca una tarea como completada.</p>
-                            </div>
+                        <p class="text-slate-400 leading-relaxed">PymeHub utiliza <strong>Resend</strong> para gestionar tus correos corporativos. El flujo es transparente: el cliente ve tu dirección de negocio, no la de PymeHub.</p>
+                        <div class="bg-black/40 p-4 rounded-xl border border-white/5 font-mono text-xs">
+                             POST https://api.pymeshub.lat/inbound/email/webhook
                         </div>
+                    </div>
+
+                    <!-- Sección: Canal de WhatsApp -->
+                    <div id="canal-whatsapp" class="scroll-mt-32 mb-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3">
+                             <i class="fa-brands fa-whatsapp text-green-500"></i> Canal de WhatsApp
+                        </h2>
+                        <p class="text-slate-400 leading-relaxed">Conexión vía <strong>Meta Cloud API</strong>. Incluye soporte para mensajes de voz, imágenes y documentos con indexación automática.</p>
+                        <div class="p-6 bg-yellow-600/10 border border-yellow-600/20 rounded-2xl">
+                             <h4 class="text-yellow-500 font-bold mb-2">Ventana de 24 Horas</h4>
+                             <p class="text-xs text-yellow-500/80">WhatsApp restringe la comunicación a una ventana de 24 horas después del último mensaje del cliente.</p>
+                        </div>
+                    </div>
+
+                    <!-- Automatizaciones -->
+                    <div id="automatizaciones" class="scroll-mt-32 mb-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3 text-white">
+                             <i class="fa-solid fa-bolt text-blue-500"></i> Automatizaciones
+                        </h2>
+                        <p class="text-slate-400 text-sm">Reglas sin código: <code>Si [Evento] + [Condición] → [Acción]</code>. Optimiza la asignación de leads y escalación de tickets.</p>
+                        <div class="card-premium p-6 border-white/5 bg-white/2">
+                            <h4 class="text-white font-bold mb-4 text-xs">Ejemplos Prácticos</h4>
+                            <ul class="text-[10px] space-y-2 text-blue-400 font-mono">
+                                <li>MENSAJE_RECIBIDO + WhatsApp → Asignar a Ventas</li>
+                                <li>TAREA_VENCIDA → Notificar a Supervisor</li>
+                                <li>CONTACTO_CREADO + VIP → Crear Tarea Prioritaria</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- CRM de Contactos -->
+                    <div id="crm" class="scroll-mt-32 mb-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3">
+                             <i class="fa-solid fa-users text-blue-500"></i> CRM de Contactos
+                        </h2>
+                        <p class="text-slate-400 text-sm">Directorio central con historial 360° de conversaciones, tareas y documentos por cada cliente o proveedor.</p>
+                    </div>
+
+                    <!-- Documentos y OCR -->
+                    <div id="documentos-ocr" class="scroll-mt-32 mb-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3">
+                             <i class="fa-solid fa-file-invoice text-blue-500"></i> Documentos y OCR
+                        </h2>
+                        <p class="text-slate-400 text-sm">Indexación automática de texto en imágenes y PDFs. Límite de 25MB por archivo con almacenamiento cifrado.</p>
                     </div>
 
                     <!-- Documentos -->
