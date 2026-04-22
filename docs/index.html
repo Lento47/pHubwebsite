@@ -62,14 +62,17 @@
                 </div>
                 <div>
                     <h5 class="text-[10px] uppercase tracking-widest font-black text-slate-500 mb-4">Módulos Core</h5>
-                    <nav class="space-y-1">
-                        <a href="#inbox" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Inbox & FAQ</a>
-                        <a href="#canal-email" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Canal de Email</a>
-                        <a href="#canal-whatsapp" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Canal de WhatsApp</a>
-                        <a href="#automatizaciones" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Automatizaciones</a>
-                        <a href="#crm" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">CRM de Contactos</a>
-                        <a href="#documentos-ocr" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Documentos y OCR</a>
-                        <a href="#endpoint-billing" class="block py-2 px-3 text-sm rounded-lg hover:bg-white/5 transition">Facturación Electrónica</a>
+                    <nav class="space-y-1 text-[11px]">
+                        <a href="#inbox" class="block py-1.5 px-3 rounded-lg hover:bg-white/5 transition">Inbox Unificado</a>
+                        <a href="#canal-email" class="block py-1.5 px-3 rounded-lg hover:bg-white/5 transition">Canal de Email</a>
+                        <a href="#canal-whatsapp" class="block py-1.5 px-3 rounded-lg hover:bg-white/5 transition">Canal de WhatsApp</a>
+                        <a href="#automatizaciones" class="block py-1.5 px-3 rounded-lg hover:bg-white/5 transition">Automatizaciones</a>
+                        <a href="#crm" class="block py-1.5 px-3 rounded-lg hover:bg-white/5 transition">CRM de Contactos</a>
+                        <a href="#documentos-ocr" class="block py-1.5 px-3 rounded-lg hover:bg-white/5 transition">Documentos y OCR</a>
+                        <a href="#facturacion" class="block py-1.5 px-3 rounded-lg hover:bg-white/5 transition">Facturación (Hacienda CR)</a>
+                        <a href="#pipeline" class="block py-1.5 px-3 rounded-lg hover:bg-white/5 transition">Pipeline de Ventas</a>
+                        <a href="#tareas" class="block py-1.5 px-3 rounded-lg hover:bg-white/5 transition">Gestión de Tareas</a>
+                        <a href="#insights" class="block py-1.5 px-3 rounded-lg hover:bg-white/5 transition">Insights con IA</a>
                     </nav>
                 </div>
                 <div>
@@ -469,12 +472,47 @@
                         <p class="text-slate-400 text-sm">Directorio central con historial 360° de conversaciones, tareas y documentos por cada cliente o proveedor.</p>
                     </div>
 
-                    <!-- Documentos y OCR -->
-                    <div id="documentos-ocr" class="scroll-mt-32 mb-20 space-y-8">
+                    <!-- Facturación -->
+                    <div id="facturacion" class="scroll-mt-32 mb-20 space-y-8">
                         <h2 class="text-3xl font-bold flex items-center gap-3">
-                             <i class="fa-solid fa-file-invoice text-blue-500"></i> Documentos y OCR
+                             <i class="fa-solid fa-file-invoice-dollar text-blue-500"></i> Facturación
                         </h2>
-                        <p class="text-slate-400 text-sm">Indexación automática de texto en imágenes y PDFs. Límite de 25MB por archivo con almacenamiento cifrado.</p>
+                        <p class="text-slate-400">Integración nativa con Hacienda de Costa Rica para facturación electrónica oficial, incluyendo XML cifrados y códigos CABYS.</p>
+                        <div class="card-premium p-6 border-white/5 bg-green-600/5">
+                            <h4 class="text-green-500 font-bold mb-2">Hacienda CR Ready</h4>
+                            <p class="text-xs text-slate-400">Soporta llaves criptográficas, receptor de facturas y anulación mediante Notas de Crédito directa.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pipeline de Ventas -->
+                    <div id="pipeline" class="scroll-mt-32 mb-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3">
+                             <i class="fa-solid fa-chart-line text-blue-500"></i> Pipeline de Ventas
+                        </h2>
+                        <p class="text-slate-400 text-sm">Gestiona tus oportunidades como un Tablero Kanban. Sigue el rastro de cada deal desde el prospecto hasta el cierre.</p>
+                    </div>
+
+                    <!-- Gestión de Tareas -->
+                    <div id="tareas" class="scroll-mt-32 mb-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3">
+                             <i class="fa-solid fa-list-check text-blue-500"></i> Gestión de Tareas
+                        </h2>
+                        <p class="text-slate-400 text-sm">Centraliza la operación. Vincula tareas a clientes o conversaciones específicas para que nada se pierda.</p>
+                    </div>
+
+                    <!-- Insights con IA -->
+                    <div id="insights" class="scroll-mt-32 mb-20 space-y-8">
+                        <h2 class="text-3xl font-bold flex items-center gap-3">
+                             <i class="fa-solid fa-brain text-blue-500"></i> Insights con IA
+                        </h2>
+                        <div class="p-6 bg-blue-600/10 rounded-2xl border border-blue-500/20">
+                            <h4 class="text-white font-bold mb-3">Severidades</h4>
+                            <div class="flex gap-2">
+                                <span class="px-2 py-1 bg-blue-500 rounded text-[10px] text-white">Informativo</span>
+                                <span class="px-2 py-1 bg-yellow-500 rounded text-[10px] text-white">Mejora</span>
+                                <span class="px-2 py-1 bg-red-500 rounded text-[10px] text-white">Crítico</span>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Documentos -->
