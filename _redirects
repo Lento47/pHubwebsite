@@ -1,2 +1,4 @@
-# Cloudflare Pages handles Clean URLs automatically. 
-# Removing the internal loops.
+# Redirects for PymeHub Documentation
+/docs    https://docs.pymeshub.lat    301
+/ayuda   https://docs.pymeshub.lat    301
+/manual  https://docs.pymeshub.lat    301
